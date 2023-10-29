@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="align-items-baseline fixed-top w-100 p-2 bg-light">
+    <header class="align-items-baseline fixed-top w-100 bg-light">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand text-black px-3" href="#">QualiVida</a>
@@ -47,28 +47,41 @@
             </div>
         </nav>
     </header>
-    <div class="background-login position-absolute h-100 w-100">
-        <div class="login position-absolute d-grid h-100 w-100">
-            <form action="/login" method="POST" class="bg-white p-4">
-                <div class="form-group mb-2">
-                    <img src="../images/logo.png" alt="logo">
-                </div>
-                <div class="form-group mb-3">
-                    <label for="InputEmail">Email</label>
-                    <input type="email" class="form-control" id="email" name="email">
-                </div>
-                <div class="form-group mb-2">
-                    <label for="InputPassword">Senha</label>
-                    <input type="password" class="form-control" id="senha" name="senha">
-                </div>
-                <div class="form-group form-check mb-4">
-                    <input type="checkbox" class="form-check-input" id="Check">
-                    <label class="form-check-label" for="Check">Lembrar-me</label>
-                </div>
-                <button type="submit" class="btn text-white w-100">Entrar</button>
-            </form>
+
+    <main class="mt-4">
+        <div class="background-login position-absolute h-100 w-100">
+            <div class="login position-absolute d-grid h-100 w-100">
+                <form action="/login" method="POST" class="bg-white p-4">
+                    <div class="form-group mb-2">
+                        <img src="../images/logo.png" alt="logo">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="InputEmail">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="InputPassword">Senha</label>
+                        <input type="password" class="form-control" id="senha" name="senha">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="Check">
+                        <label class="form-check-label" for="Check">Lembrar-me</label>
+                    </div>
+
+                    <% if (error) { %>
+                        <div class="error-message text-sm text-danger text-center mt-4">
+                            <%= error %>
+                        </div>
+                        <% } %>
+
+
+
+                            <button type="submit" class="btn text-white w-100 mt-4">Entrar</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </main>
+
 </body>
 
 </html>
