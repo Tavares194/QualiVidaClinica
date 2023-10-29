@@ -16,9 +16,6 @@ export const loginUsuario = (req, res) => {
     const email = req.body.email;
     const senha = req.body.senha;
 
-    console.log(req.body, email, senha);
-
-
     const error = [];
 
     if (email === "") {
