@@ -1,23 +1,24 @@
 import express from "express";
-import rotasUsuario from "./rotas/rotasUsuario.js";
 import cors from "cors";
-import { loginUsuario } from "./controllers/userController.js";
+import { fileURLToPath } from 'url'; // Import the 'fileURLToPath' function
+import { dirname } from 'path'; // Import the 'dirname' function
+import routesLogin from "./rotas/rotasUsuario.js";
 
-const path = require("path");
+// Use the 'fileURLToPath' function to convert the module URL to a file path
+const __filename = fileURLToPath(import.meta.url);
+// Use the 'dirname' function to get the directory path
+const __dirname = dirname(__filename);
 
 const app = express();
-
-function login(req, res) {
-    const caminho = path.join(__dirname, "pages", "login.html");
-    res.sendFile(caminho)
-}
-
-app.get("/login", login)
-app.post("/login", loginUsuario)
-
+app.use(express.static(__dirname));
 app.use(express.json());
 app.use(cors());
 
-app.use("/user", rotasUsuario);
+app.use("/pages/login.html", routesLogin);
+
+app.get('/login', (req, res) => {
+    const filePath = 'pages/login.html'; // Relative path to the file
+    res.sendFile(filePath, { root: __dirname });
+})
 
 app.listen(8081);
