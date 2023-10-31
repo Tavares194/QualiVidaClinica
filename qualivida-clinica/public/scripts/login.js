@@ -5,16 +5,46 @@ const passwordInput = document.querySelector('#senha');
 
 document.addEventListener('DOMContentLoaded', () => {
   if (error) {
-    errorDiv.innerText = error;
+    errorDiv.innerText = 'Email e/ou senha inválidos!';
   }
+
+  if (email) {
+    emailInput.value = email;
+  }
+})
+
+emailInput.addEventListener('focus', event => {
+  emailInput.classList.remove('is-invalid')
+})
+
+passwordInput.addEventListener('focus', event => {
+  passwordInput.classList.remove('is-invalid')
 })
 
 loginForm.addEventListener('submit', (event) => {
   event.preventDefault();
   let formError;
 
-  if (!emailInput.value || !passwordInput.value) {
+  if (!emailInput.value && !passwordInput.value) {
     formError = 'Preencha todos os campos!';
+    emailInput.classList.add('is-invalid');
+    passwordInput.classList.add('is-invalid');
+  }
+
+  if (!emailInput.value) {
+    formError = 'Preencha o campo email!';
+    emailInput.classList.add('is-invalid');
+  }
+
+  if (!passwordInput.value) {
+    formError = 'Preencha o campo senha!';
+    passwordInput.classList.add('is-invalid');
+  }
+
+  if (!emailInput.value && !passwordInput.value) {
+    formError = 'Preencha todos os campos!';
+    emailInput.classList.add('is-invalid');
+    passwordInput.classList.add('is-invalid');
   }
 
   if (formError) {
