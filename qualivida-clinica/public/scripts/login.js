@@ -25,12 +25,6 @@ loginForm.addEventListener('submit', (event) => {
   event.preventDefault();
   let formError;
 
-  if (!emailInput.value && !passwordInput.value) {
-    formError = 'Preencha todos os campos!';
-    emailInput.classList.add('is-invalid');
-    passwordInput.classList.add('is-invalid');
-  }
-
   if (!emailInput.value) {
     formError = 'Preencha o campo email!';
     emailInput.classList.add('is-invalid');
