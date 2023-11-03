@@ -1,0 +1,60 @@
+:root {
+    --color1: #095256;
+    --color2: #087F8C;
+}
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/floor1-image.png");
+}
+
+.floor1 {
+    height: 500px;
+}
+
+.floor1-content {
+    padding: 15vh;
+    align-items: center;
+}
+
+.text1-floor1 {
+    font-family: 'Arvo', serif;
+    font-weight: 500;
+    font-size: 70px;
+    color: white;
+    text-align: center;
+}
+
+.text2-floor1 {
+    font-family: 'Arvo', serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.floor2 {
+    height: 450px;
+    background: #09525685;
+}
+
+.floor2-content {
+    display:grid;
+    place-items:center;
+    padding: 4vh;
+    justify-content: center;
+}
+
+.text1-floor2 {
+    font-family: 'Arvo', serif;
+    font-weight: 500;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+
+.floor2-img {
+    display:grid;
+    place-items:center;
+}

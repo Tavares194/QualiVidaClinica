@@ -9,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 import routesLogin from "./routes/routesLogin.js";
+import routesHome from "./routes/routesHome.js";
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'public', 'views'));
 app.use(routesLogin);
+app.use(routesHome);
 
 app.listen(8081, () => {
   console.log("Running on port 8081");
