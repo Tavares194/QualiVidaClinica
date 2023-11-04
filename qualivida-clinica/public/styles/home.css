@@ -1,60 +1,29 @@
-:root {
-    --color1: #095256;
-    --color2: #087F8C;
-}
-
 body{
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../images/floor1-image.png");
+    background-image: url("../images/floor1-image.jpg");
+}
+
+main *{
+    font-family: 'Arvo', serif;
 }
 
 .floor1 {
-    height: 500px;
-}
-
-.floor1-content {
-    padding: 15vh;
+    height: 50vh;
+    padding-top: 15vh;
     align-items: center;
 }
 
-.text1-floor1 {
-    font-family: 'Arvo', serif;
-    font-weight: 500;
-    font-size: 70px;
+.agendar{
+    height: 10vh;
+    width: 20vw;
+    font-size: 30px;
     color: white;
-    text-align: center;
-}
-
-.text2-floor1 {
-    font-family: 'Arvo', serif;
-    font-weight: 300;
-    font-size: 20px;
-    color: white;
-    text-align: center;
 }
 
 .floor2 {
-    height: 450px;
+    height: 50vh;
     background: #09525685;
-}
-
-.floor2-content {
-    display:grid;
-    place-items:center;
-    padding: 4vh;
-    justify-content: center;
-}
-
-.text1-floor2 {
-    font-family: 'Arvo', serif;
-    font-weight: 500;
-    font-size: 35px;
-    color: white;
-    text-align: center;
-}
-
-.floor2-img {
-    display:grid;
+    display: grid;
     place-items:center;
 }

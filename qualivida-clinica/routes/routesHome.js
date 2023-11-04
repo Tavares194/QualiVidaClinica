@@ -3,6 +3,6 @@ import { getPage } from "../controllers/homeController.js";
 
 const routes = express.Router();
 
-routes.get('/home', getPage)
+routes.get('/', getPage)
 
 export default routes;
