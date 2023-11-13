@@ -20,3 +20,13 @@
     font-size: 30px;
     color: black;
 }
+
+ul.navbar-nav>* {
+    margin-left: 2vw;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav span {
+        display: none;
+    }
+}

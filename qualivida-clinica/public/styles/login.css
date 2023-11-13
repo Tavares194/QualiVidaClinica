@@ -30,17 +30,3 @@ button[type="submit"]:hover {
 input[type="checkbox"]:checked {
     background-color: var(--color1);
 }
-
-.quick-acess>* {
-    margin-left: 2vw;
-}
-
-ul>* {
-    margin-left: 2vw;
-}
-
-@media (max-width: 992px) {
-    .navbar-nav span {
-        display: none;
-    }
-}
