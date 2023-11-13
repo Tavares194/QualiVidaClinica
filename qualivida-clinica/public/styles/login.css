@@ -38,3 +38,9 @@ input[type="checkbox"]:checked {
 ul>* {
     margin-left: 2vw;
 }
+
+@media (max-width: 992px) {
+    .navbar-nav span {
+        display: none;
+    }
+}
