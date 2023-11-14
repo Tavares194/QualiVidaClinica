@@ -1,0 +1,32 @@
+:root {
+    --color1: #095256;
+    --color2: #087F8C;
+}
+
+.background-login {
+    background-image: url("../images/login-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login {
+    place-items: center;
+    background-color: rgba(9, 82, 86, 0.5);
+}
+
+form {
+    scale: 1.2;
+    border-radius: 20px;
+}
+
+button[type="submit"] {
+    background-color: var(--color2);
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color1);
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--color1);
+}

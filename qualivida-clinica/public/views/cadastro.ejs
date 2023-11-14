@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Arvo:wght@400;700&family=Inconsolata:wght@400;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header class="align-items-baseline fixed-top w-100 bg-light">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand text-black px-3" href="/">QualiVida</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse mx-3" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-black" aria-current="page"
+                                href="/especialidade">Especialidades</a>
+                        </li>
+                        <span class="space-between"> │ </span>
+                        <li class="nav-item">
+                            <a class="nav-link active text-black" href="#">Serviços</a>
+                        </li>
+                        <span class="space-between"> │ </span>
+                        <li class="nav-item">
+                            <a class="nav-link active text-black" href="#">Profissionais</a>
+                        </li>
+                        <span class="space-between"> │ </span>
+                        <li class="nav-item">
+                            <a class="nav-link active text-black" href="#">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mt-4">
+        <div class="background-login position-absolute h-100 w-100">
+            <div class="login position-absolute d-grid h-100 w-100">
+                <form action="/cadastro" method="POST" class="bg-white p-4" id="cadastro-form">
+                    <div class="form-group mb-2">
+                        <img src="../images/logo.png" alt="logo">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="InputNome">Nome completo</label>
+                        <input type="text" class="form-control" id="nome" name="nome">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="InputCPF">CPF</label>
+                        <input type="text" class="form-control" id="cpf" name="cpf">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="InputRG">RG</label>
+                        <input type="text" class="form-control" id="rg" name="rg">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="InputEmail">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="InputPassword">Senha</label>
+                        <input type="password" class="form-control" id="senha" name="senha">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="Check">
+                        <label class="form-check-label" for="Check">Lembrar-me</label>
+                    </div>
+
+                    <div class="error-message text-sm text-danger text-center mt-4"></div>
+
+                    <button type="submit" class="btn text-white w-100 mt-4">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!--Esses Scripts são responsáveis pelo funcionamento do menu quando hamburguer// Arrumar um jeito de deixar geral como o "general.css"-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="../scripts/cadastro.js"></script>
+
+</body>
+
+</html>
