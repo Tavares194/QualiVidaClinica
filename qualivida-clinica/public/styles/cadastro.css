@@ -3,19 +3,20 @@
     --color2: #087F8C;
 }
 
-.background-login {
+.background-cadastro {
     background-image: url("../images/login-img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.login {
+.cadastro {
     place-items: center;
     background-color: rgba(9, 82, 86, 0.5);
 }
 
 form {
     border-radius: 20px;
+    margin-top: 25vh;
 }
 
 button[type="submit"] {
@@ -28,4 +29,8 @@ button[type="submit"]:hover {
 
 input[type="checkbox"]:checked {
     background-color: var(--color1);
+}
+
+.cadastro-logo-img {
+    width: 50%;
 }

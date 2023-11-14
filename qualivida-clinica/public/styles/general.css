@@ -3,6 +3,11 @@
     font-weight: 400;
 }
 
+.nav-brand {
+    width: 10vw;
+    margin-left: 1.5vh;
+}
+
 .nav-text {
     font-family: 'Arvo', serif;
     font-weight: 400;
