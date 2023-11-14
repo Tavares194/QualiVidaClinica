@@ -1,7 +1,7 @@
 import { db } from "../database/db.js";
 
 export const getPage = (req, res) => {
-    res.render('cadastro', { error: null, email: null });
+    res.render('cadastro', { mensagem_erro: null });
 }
 
 export const cadastroUsuario = (req, res) => {
@@ -10,7 +10,7 @@ export const cadastroUsuario = (req, res) => {
     const rg = req.body.rg;
     const email = req.body.email;
     const senha = req.body.senha;
-    var mensagem_erro = '';
+    var mensagem_erro;
 
     const valores = [nome, cpf, rg, email, senha];
 
@@ -22,33 +22,36 @@ export const cadastroUsuario = (req, res) => {
 
     db.query(query_cpfVerification, cpf, (error, results) => {
         if (error) return res.json(error);
-        if (results) mensagem_erro += "CPF já cadastrado";
-        console.log(mensagem_erro);
-    });
+        if (results.length != 0) {
+            mensagem_erro = "CPF já cadastrado";
+            res.render('cadastro', { mensagem_erro: mensagem_erro })
+            return;
+        }
+        else {
+            db.query(query_rgVerification, rg, (error, results) => {
+                if (error) return res.json(error);
+                if (results.length != 0) {
+                    mensagem_erro = " RG já cadastrado";
+                    res.render('cadastro', { mensagem_erro: mensagem_erro })
+                    return;
+                }
+                else {
+                    db.query(query_emailVerification, email, (error, results) => {
+                        if (error) return res.json(error);
+                        if (results.length != 0) {
+                            mensagem_erro = " Email já cadastrado";
+                            res.render('cadastro', { mensagem_erro: mensagem_erro })
+                            return;
+                        } else {
+                            db.query(query_insert, [valores], (error) => {
+                                if (error) return res.json(error);
+                                return res.render('login', { error: null, email: null });
+                            });
+                        }
 
-    db.query(query_rgVerification, rg, (error, results) => {
-        if (error) return res.json(error);
-        if (results) mensagem_erro += " RG já cadastrado";
-        console.log(mensagem_erro);
+                    });
+                }
+            });
+        }
     });
-
-    db.query(query_emailVerification, email, (error, results) => {
-        if (error) return res.json(error);
-        if (results) mensagem_erro += " Email já cadastrado";
-        console.log(mensagem_erro);
-    });
-
-    if (mensagem_erro != '') {
-        console.log(mensagem_erro);
-        res.render('cadastro', { mensagem_erro: mensagem_erro })
-    } else {
-        db.query(query_insert, [valores], (error) => {
-            if (error) return res.json(error);
-            if (mensagem_erro != '') {
-                console.log(mensagem_erro);
-                return res.render('cadastro', { mensagem_erro: mensagem_erro })
-            }
-            else { return res.render('login', { error: null, email: null }); }
-        });
-    }
 }
