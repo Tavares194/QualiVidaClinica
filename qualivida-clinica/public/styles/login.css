@@ -10,12 +10,10 @@
 }
 
 .login {
-    place-items: center;
     background-color: rgba(9, 82, 86, 0.5);
 }
 
 form {
-    scale: 1.2;
     border-radius: 20px;
 }
 
@@ -29,4 +27,10 @@ button[type="submit"]:hover {
 
 input[type="checkbox"]:checked {
     background-color: var(--color1);
+}
+
+.login-logo-img {
+    width: 50%;
+    stroke: var(--color2);
+    fill: var(--color2)
 }

@@ -1,6 +1,6 @@
 * {
-  font-family: 'Alegreya', serif;
-  font-weight: 400;
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
 }
 
 .nav-text {
@@ -25,8 +25,20 @@ ul.navbar-nav>* {
     margin-left: 2vw;
 }
 
+.nav-item {
+    transition: all .2s;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 992px) {
     .navbar-nav span {
         display: none;
+    }
+
+    ul.navbar-nav>* {
+        margin: 0;
     }
 }

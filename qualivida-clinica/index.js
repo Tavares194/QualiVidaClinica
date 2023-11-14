@@ -13,9 +13,18 @@ import routesHome from "./routes/routesHome.js";
 import routesEspecialidades from "./routes/routesEspecialidades.js";
 
 const app = express();
+const port = 8081;
 
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+  origin: `http://localhost:${port}`,
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
@@ -26,6 +35,6 @@ app.use(routesLogin);
 app.use(routesHome);
 app.use(routesEspecialidades);
 
-app.listen(8081, () => {
-  console.log("Running on port 8081");
+app.listen(port, () => {
+  console.log(`Running on port ${port}`);
 });
