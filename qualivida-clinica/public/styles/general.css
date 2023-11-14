@@ -1,49 +1,10 @@
-* {
-    font-family: 'Alegreya', serif;
-    font-weight: 400;
-}
-
-.nav-brand {
-    width: 10vw;
-    margin-left: 1.5vh;
-}
-
-.nav-text {
-    font-family: 'Arvo', serif;
-    font-weight: 400;
-}
-
-.text-black {
-    font-family: 'Arvo', serif;
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.space-between {
-    font-family: 'Arvo', serif;
-    font-weight: 500;
-    font-size: 30px;
-    color: black;
-}
-
-ul.navbar-nav>* {
-    margin-left: 2vw;
-}
-
-.nav-item {
+.btn-primary {
+    background-color: var(--color2);
+    border: 1px solid var(--color2);
     transition: all .2s;
 }
 
-.nav-item:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 992px) {
-    .navbar-nav span {
-        display: none;
-    }
-
-    ul.navbar-nav>* {
-        margin: 0;
-    }
+.btn-primary:hover {
+    background-color: var(--color2);
+    filter: brightness(90%);
 }
