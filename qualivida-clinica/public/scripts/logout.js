@@ -11,7 +11,7 @@ function logout() {
   })
     .then(response => {
       if (response.ok) {
-        window.location.re;
+        window.location.reload();
       } else {
         console.error('Logout failed');
       }

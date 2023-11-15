@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import session from "express-session";
+import serveFavicon from "serve-favicon";
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -36,6 +37,7 @@ app.use(cors(corsOptions));
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
+app.use(serveFavicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'public', 'views'));

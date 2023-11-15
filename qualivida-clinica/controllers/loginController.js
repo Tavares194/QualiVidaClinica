@@ -35,7 +35,7 @@ export const loginUsuario = (req, res) => {
     const email = req.body.email;
     const senha = req.body.senha;
 
-    const query = "SELECT * FROM usuario WHERE email=?";
+    const query = "SELECT usuario_id, senha, nome FROM usuario WHERE email=?";
 
     db.query(query, email, (error, data) => {
         if (error) {
