@@ -49,7 +49,6 @@ export const loginUsuario = (req, res) => {
             if (comparePasswords(senha, user.senha)) {
                 req.session.userId = user.usuario_id;
                 req.session.username = user.nome.split(' ')[0];
-                console.log(req.session);
                 res.redirect('/');
                 return;
             }
