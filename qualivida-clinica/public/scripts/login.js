@@ -3,16 +3,6 @@ const errorDiv = document.querySelector('.error-message');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#senha');
 
-document.addEventListener('DOMContentLoaded', () => {
-  if (error) {
-    errorDiv.innerText = 'Email e/ou senha inválidos!';
-  }
-
-  if (email) {
-    emailInput.value = email;
-  }
-})
-
 emailInput.addEventListener('focus', event => {
   emailInput.classList.remove('is-invalid')
 })

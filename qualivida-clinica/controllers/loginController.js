@@ -1,26 +1,46 @@
 import { db } from "../database/db.js";
+import bcrypt from "bcrypt";
+
+async function comparePasswords(userInputPassword, hashedPasswordFromDatabase) {
+    try {
+        const result = await bcrypt.compare(userInputPassword, hashedPasswordFromDatabase);
+
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+    } catch (error) {
+        console.error(error);
+        return false;
+    }
+}
 
 export const getPage = (req, res) => {
-    res.render('login', { error: null, email: null });
+    res.render('login');
 }
 
 export const loginUsuario = (req, res) => {
     const email = req.body.email;
     const senha = req.body.senha;
 
-    const query = "SELECT * FROM usuario WHERE email=? and senha=?";
+    const query = "SELECT * FROM usuario WHERE email=?";
 
-    const valores = [email, senha];
-
-    db.query(query, [...valores], (error, data) => {
+    db.query(query, email, (error, data) => {
         if (error) {
             return res.json(error);
         }
 
         if (data.length > 0) {
-            return res.json(data).status(200);
-        } else {
-            res.render('login', { error: true, email: email })
+            const user = data[0];
+
+            //Logar na session e talvez cookie...
+            if (comparePasswords(senha, user.senha)) {
+                res.redirect('/');
+                return;
+            }
         }
+        res.render('login', { error: "Email e/ou senha inválidos", email: email })
+        return;
     });
 }

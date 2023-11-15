@@ -1,5 +1,6 @@
 import { db } from "../database/db.js";
 import { formValidator } from "../validators/cadastroValidator.js"
+import bcrypt from "bcrypt";
 
 async function checkIfAlreadyRegistered(query, value, res) {
     return new Promise((resolve, reject) => {
@@ -18,55 +19,59 @@ async function checkIfAlreadyRegistered(query, value, res) {
 }
 
 export const getPage = (req, res) => {
-    res.render('cadastro', { mensagem_erro: null, nome: null, email: null, cpf: null, rg: null })
+    res.render('cadastro')
 }
 
 export const cadastroUsuario = async (req, res) => {
-    const nome = req.body.nome;
-    const cpf = req.body.cpf;
-    const rg = req.body.rg;
-    const email = req.body.email;
-    const senha = req.body.senha;
-    const confirmarSenha = req.body.confirmarSenha;
+    const formData = {
+        nome: req.body.nome,
+        cpf: req.body.cpf,
+        rg: req.body.rg,
+        email: req.body.email,
+    };
 
-    const validationError = formValidator(nome, cpf, rg, email, senha, confirmarSenha);
+    const valores = { ...formData };
+    valores['senha'] = req.body.senha;
+    valores['confirmarSenha'] = req.body.confirmarSenha;
+
+    const validationError = formValidator(valores);
     if (validationError) {
-        res.render('cadastro', { mensagem_erro: validationError, nome: nome, email: email, cpf: cpf, rg: rg })
+        res.render('cadastro', { mensagem_erro: validationError, formData })
         return;
     }
 
-    const valores = [nome, cpf, rg, email, senha];
-
-    const query_insert = "INSERT INTO usuario (nome, cpf, rg, email, senha) VALUES(?);";
-
-    const query_cpfVerification = "SELECT usuario_id FROM usuario WHERE cpf=?";
-    const query_rgVerification = "SELECT usuario_id FROM usuario WHERE rg=?";
-    const query_emailVerification = "SELECT usuario_id FROM usuario WHERE email=?";
-
     try {
-        const cpfAlreadyRegistered = await checkIfAlreadyRegistered(query_cpfVerification, cpf, res);
+        const query_cpfVerification = "SELECT usuario_id FROM usuario WHERE cpf=?";
+        const cpfAlreadyRegistered = await checkIfAlreadyRegistered(query_cpfVerification, valores.cpf, res);
         if (cpfAlreadyRegistered) {
-            res.render('cadastro', { mensagem_erro: "CPF já está em uso!", nome: nome, email: email, cpf: cpf, rg: rg })
+            res.render('cadastro', { mensagem_erro: "CPF já está em uso!", formData })
             return;
         }
 
-        const rgAlreadyRegistered = await checkIfAlreadyRegistered(query_rgVerification, rg, res);
+        const query_rgVerification = "SELECT usuario_id FROM usuario WHERE rg=?";
+        const rgAlreadyRegistered = await checkIfAlreadyRegistered(query_rgVerification, valores.rg, res);
         if (rgAlreadyRegistered) {
-            res.render('cadastro', { mensagem_erro: "RG já está em uso", nome: nome, email: email, cpf: cpf, rg: rg })
+            res.render('cadastro', { mensagem_erro: "RG já está em uso", formData })
             return;
         }
 
-        const emailAlreadyRegistered = await checkIfAlreadyRegistered(query_emailVerification, email, res);
+        const query_emailVerification = "SELECT usuario_id FROM usuario WHERE email=?";
+        const emailAlreadyRegistered = await checkIfAlreadyRegistered(query_emailVerification, valores.email, res);
         if (emailAlreadyRegistered) {
-            res.render('cadastro', { mensagem_erro: "Email já está em uso", nome: nome, email: email, cpf: cpf, rg: rg })
+            res.render('cadastro', { mensagem_erro: "Email já está em uso", formData })
             return;
         }
 
+        valores.senha = await bcrypt.hash(valores.senha, 10);
+
+        delete valores.confirmarSenha;
+
+        const query_insert = "INSERT INTO usuario SET ?;";
         db.query(query_insert, [valores], (error) => {
             if (error) {
                 return res.json(error);
             }
-            return res.render('login', { error: null, email: null });
+            return res.render('login', { successMessage: "Cadastro realizado com sucesso! Entre com suas credenciais." });
         });
     } catch (error) {
         return res.json(error);

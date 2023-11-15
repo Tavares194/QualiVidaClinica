@@ -7,12 +7,6 @@ const passwordInput = document.querySelector('#senha');
 const confirmPasswordInput = document.querySelector('#confirmarSenha');
 const errorDiv = document.querySelector('.error-message');
 
-document.addEventListener('DOMContentLoaded', () => {
-  if (mensagem_erro) {
-    errorDiv.innerText = mensagem_erro;
-  }
-})
-
 nomeInput.addEventListener('focus', event => {
   nomeInput.classList.remove('is-invalid')
 })

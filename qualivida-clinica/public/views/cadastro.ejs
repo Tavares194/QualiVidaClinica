@@ -57,23 +57,27 @@
                         <div class="me-4">
                             <div class="form-group mb-3">
                                 <label for="InputNome">Nome Completo:</label>
-                                <input type="text" class="form-control" id="nome" name="nome" value="<%= nome %>">
+                                <input type="text" class="form-control" id="nome" name="nome"
+                                    value="<%= typeof formData !== 'undefined' ? formData.nome : '' %>">
                             </div>
 
                             <div class="form-group mb-3">
                                 <label for="InputCPF">CPF:</label>
-                                <input type="text" class="form-control" id="cpf" name="cpf" value="<%= cpf %>">
+                                <input type="text" class="form-control" id="cpf" name="cpf"
+                                    value="<%= typeof formData !== 'undefined' ? formData.cpf : '' %>">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="InputRG">RG:</label>
-                                <input type="text" class="form-control" id="rg" name="rg" value="<%= rg %>">
+                                <input type="text" class="form-control" id="rg" name="rg"
+                                    value="<%= typeof formData !== 'undefined' ? formData.rg : '' %>">
                             </div>
                         </div>
 
                         <div>
                             <div class="form-group mb-3">
                                 <label for="InputEmail">Email:</label>
-                                <input type="email" class="form-control" id="email" name="email" value="<%= email %>">
+                                <input type="email" class="form-control" id="email" name="email"
+                                    value="<%= typeof formData !== 'undefined' ? formData.email : '' %>">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="InputPassword">Senha:</label>
@@ -88,9 +92,13 @@
 
                     </div>
 
-                    <div class="error-message text-sm text-danger text-center mt-4"></div>
+                    <% if (typeof mensagem_erro !=='undefined' ) { %>
+                        <div class="error-message text-sm text-danger text-center mt-4">
+                            <%= mensagem_erro %>
+                        </div>
+                        <% } %>
 
-                    <button type="submit" class="btn text-white w-100 mt-4">Cadastrar</button>
+                            <button type="submit" class="btn text-white w-100 mt-4">Cadastrar</button>
                 </form>
             </div>
         </div>
@@ -104,9 +112,6 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
-    <script>
-        const mensagem_erro = "<%= mensagem_erro %>";
-    </script>
     <script type="module" src="../scripts/cadastro.js"></script>
 
 </body>

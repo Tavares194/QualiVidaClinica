@@ -24,38 +24,38 @@ function validateCPF(strCPF) {
   return true;
 }
 
-export const formValidator = function (nome, cpf, rg, email, senha, confirmarSenha) {
-  const fields = [nome, cpf, rg, email, senha, confirmarSenha]
+export const formValidator = function (valores) {
   let formError = null;
 
+  const valoresArray = Object.values(valores);
   let hasEmptyField = false;
-  fields.forEach(field => {
-    if (!field) {
+  valoresArray.forEach(valor => {
+    if (!valor) {
       hasEmptyField = true;
     }
   })
 
-  if (hasEmptyField) {
+  if (hasEmptyField || valoresArray.length !== 6) {
     formError = 'Todos os campos devem ser preenchidos!';
     return formError;
   }
 
-  if (!isPasswordValid(senha)) {
+  if (!isPasswordValid(valores.senha)) {
     formError = 'A senha criada não atende aos requisitos!';
     return formError;
   }
 
-  if (senha != confirmarSenha) {
+  if (valores.senha != valores.confirmarSenha) {
     formError = 'As senhas não coincidem!';
     return formError;
   }
 
-  if (!validateCPF(cpf)) {
+  if (!validateCPF(valores.cpf)) {
     formError = 'CPF Inválido!';
     return formError;
   }
 
-  if (rg.length !== 9) {
+  if (valores.rg.length !== 9) {
     formError = 'RG Inválido!';
     return formError;
   }
