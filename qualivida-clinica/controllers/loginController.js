@@ -21,6 +21,17 @@ export const getPage = (req, res) => {
 }
 
 export const loginUsuario = (req, res) => {
+
+    if (req.body.action === 'logout') {
+        req.session.destroy((err) => {
+            if (err) {
+                console.error('Error destroying session:', err);
+                return res.status(500).send('Internal Server Error');
+            }
+            return;
+        });
+    }
+
     const email = req.body.email;
     const senha = req.body.senha;
 
@@ -37,6 +48,7 @@ export const loginUsuario = (req, res) => {
             //Logar na session e talvez cookie...
             if (comparePasswords(senha, user.senha)) {
                 req.session.userId = user.usuario_id;
+                req.session.username = user.nome.split(' ')[0];
                 console.log(req.session);
                 res.redirect('/');
                 return;

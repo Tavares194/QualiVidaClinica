@@ -1,3 +1,4 @@
 export const getPage = (req, res) => {
-    res.render('home');
+    const username = req.session.username
+    res.render('home', { username });
 }

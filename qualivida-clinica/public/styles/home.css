@@ -1,15 +1,10 @@
-:root {
-    --color1: #095256;
-    --color2: #087F8C;
-}
-
-body{
+body {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../images/floor1-image.jpg");
 }
 
-main *{
+main * {
     font-family: 'Arvo', serif;
 }
 
@@ -17,7 +12,7 @@ main *{
     height: 60vh;
     padding: 5vh;
     align-items: center;
-    place-items:center;
+    place-items: center;
 }
 
 .agendar {

@@ -1,3 +1,8 @@
+:root {
+    --color1: #095256;
+    --color2: #087F8C;
+}
+
 .btn-primary {
     background-color: var(--color2);
     border: 1px solid var(--color2);
@@ -7,4 +12,19 @@
 .btn-primary:hover {
     background-color: var(--color2);
     filter: brightness(90%);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dropdown-menu {
+    --bs-dropdown-link-active-bg: var(--color2);
+    animation: fadeIn 0.2s ease-in-out;
 }
