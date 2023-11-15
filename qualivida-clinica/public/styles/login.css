@@ -1,16 +1,20 @@
-:root {
-    --color1: #095256;
-    --color2: #087F8C;
-}
-
-.background-login {
+body {
     background-image: url("../images/login-img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.login {
-    background-color: rgba(9, 82, 86, 0.5);
+.background-color {
+    background-color: var(--color2);
+    opacity: .5;
+    filter: brightness(80%);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
 }
 
 form {
