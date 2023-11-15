@@ -34,7 +34,7 @@ passwordInput.addEventListener('focus', event => {
 })
 
 confirmPasswordInput.addEventListener('focus', event => {
-  passwordInput.classList.remove('is-invalid')
+  confirmPasswordInput.classList.remove('is-invalid')
 })
 
 function isPasswordValid(password) {
@@ -46,42 +46,20 @@ function renderError(error) {
   errorDiv.innerText = error;
 }
 
-function validateRG(strRG) {
-  const numerosRG = strRG.replace(/\D/g, '').slice(0, -1);
-
-  if (numerosRG.length !== 9) {
-    return false;
-  }
-
-  let soma = 0;
-  for (let i = 0; i < 8; i++) {
-    soma += parseInt(numerosRG.charAt(i)) * (8 - i);
-  }
-
-  const resto = soma % 11;
-  let digitoVerificador = 11 - resto;
-  if (digitoVerificador === 10 || digitoVerificador === 11) {
-    digitoVerificador = 0;
-  }
-
-  const ultimoDigito = parseInt(strRG.charAt(strRG.length - 1));
-  return digitoVerificador === ultimoDigito;
-}
-
 function validateCPF(strCPF) {
   var soma;
   var resto;
   soma = 0;
   if (strCPF == "00000000000") return false;
 
-  for (i = 1; i <= 9; i++) soma = soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
+  for (let i = 1; i <= 9; i++) soma = soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
   resto = (soma * 10) % 11;
 
   if ((resto == 10) || (resto == 11)) resto = 0;
   if (resto != parseInt(strCPF.substring(9, 10))) return false;
 
   soma = 0;
-  for (i = 1; i <= 10; i++) soma = soma + parseInt(strCPF.substring(i - 1, i)) * (12 - i);
+  for (let i = 1; i <= 10; i++) soma = soma + parseInt(strCPF.substring(i - 1, i)) * (12 - i);
   resto = (soma * 10) % 11;
 
   if ((resto == 10) || (resto == 11)) resto = 0;
@@ -123,7 +101,7 @@ cadastroForm.addEventListener('submit', event => {
 
   cpfInput.value = cpfInput.value.replace(/[.-]/g, '');
 
-  if (validateCPF(cpfInput.value)) {
+  if (!validateCPF(cpfInput.value)) {
     formError = 'CPF Inválido!';
     renderError(formError)
     return;
@@ -131,7 +109,7 @@ cadastroForm.addEventListener('submit', event => {
 
   rgInput.value = rgInput.value.replace(/[.-]/g, '');
 
-  if (!validateRG(rgInput.value)) {
+  if (rgInput.value.length !== 9) {
     formError = 'RG Inválido!';
     renderError(formError);
     return;
