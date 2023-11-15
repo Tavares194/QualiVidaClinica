@@ -114,19 +114,17 @@
                     </div>
 
 
-                    <% if (typeof error !=='undefined' ) { %>
-                        <div class="error-message text-sm text-danger text-center mt-4">
-                            <%= error %>
+                    <div class="error-message text-sm text-danger text-center mt-4">
+                        <%= typeof error !=='undefined' ? error : '' %>
+                    </div>
+
+                    <% if (typeof successMessage !=='undefined' ) { %>
+                        <div class="error-message text-sm text-success text-center mt-4">
+                            <%= successMessage %>
                         </div>
                         <% } %>
 
-                            <% if (typeof successMessage !=='undefined' ) { %>
-                                <div class="error-message text-sm text-success text-center mt-4">
-                                    <%= successMessage %>
-                                </div>
-                                <% } %>
-
-                                    <button type="submit" class="btn text-white w-100 mt-4">Entrar</button>
+                            <button type="submit" class="btn text-white w-100 mt-4">Entrar</button>
                 </form>
             </div>
         </div>

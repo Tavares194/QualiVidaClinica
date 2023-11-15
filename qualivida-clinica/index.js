@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import session from "express-session";
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -17,6 +18,12 @@ const app = express();
 const port = 8081;
 
 app.use(express.json());
+
+app.use(session({
+  secret: 'secret',
+  resave: false,
+  saveUninitialized: true,
+}));
 
 const corsOptions = {
   origin: `http://localhost:${port}`,

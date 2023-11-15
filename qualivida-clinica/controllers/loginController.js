@@ -36,6 +36,8 @@ export const loginUsuario = (req, res) => {
 
             //Logar na session e talvez cookie...
             if (comparePasswords(senha, user.senha)) {
+                req.session.userId = user.usuario_id;
+                console.log(req.session);
                 res.redirect('/');
                 return;
             }
