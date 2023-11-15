@@ -3,6 +3,13 @@
     --color2: #087F8C;
 }
 
+body,
+html {
+    min-height: 100vh;
+    height: 100%;
+    overflow: visible;
+}
+
 .btn-primary {
     --bs-btn-bg: var(--color2);
     --bs-btn-border-color: var(--color2);
