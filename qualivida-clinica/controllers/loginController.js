@@ -20,7 +20,7 @@ export const getPage = (req, res) => {
     res.render('login');
 }
 
-export const loginUsuario = (req, res) => {
+export const loginUsuario = async (req, res) => {
 
     if (req.body.action === 'logout') {
         req.session.destroy((err) => {
@@ -37,7 +37,7 @@ export const loginUsuario = (req, res) => {
 
     const query = "SELECT usuario_id, senha, nome FROM usuario WHERE email=?";
 
-    db.query(query, email, (error, data) => {
+    db.query(query, email, async (error, data) => {
         if (error) {
             return res.json(error);
         }
@@ -45,8 +45,9 @@ export const loginUsuario = (req, res) => {
         if (data.length > 0) {
             const user = data[0];
 
-            //Logar na session e talvez cookie...
-            if (comparePasswords(senha, user.senha)) {
+            //TO-DO: Cookies...
+            const passwordsMatch = await comparePasswords(senha, user.senha);
+            if (passwordsMatch) {
                 req.session.userId = user.usuario_id;
                 req.session.username = user.nome.split(' ')[0];
                 res.redirect('/');
