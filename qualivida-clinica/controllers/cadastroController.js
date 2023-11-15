@@ -1,15 +1,13 @@
 import { db } from "../database/db.js";
 import { formValidator } from "../validators/cadastroValidator.js"
 
-async function checkIfAlreadyRegistered(query, value, errorMessage, res) {
+async function checkIfAlreadyRegistered(query, value, res) {
     return new Promise((resolve, reject) => {
         db.query(query, value, (error, results) => {
             if (error) {
                 reject(error);
             } else {
                 if (results.length !== 0) {
-                    const mensagem_erro = errorMessage;
-                    res.render('cadastro', { mensagem_erro });
                     resolve(true);
                 } else {
                     resolve(false);
@@ -20,7 +18,7 @@ async function checkIfAlreadyRegistered(query, value, errorMessage, res) {
 }
 
 export const getPage = (req, res) => {
-    res.render('cadastro', { mensagem_erro: null });
+    res.render('cadastro', { mensagem_erro: null, nome: null, email: null, cpf: null, rg: null })
 }
 
 export const cadastroUsuario = async (req, res) => {
@@ -33,7 +31,7 @@ export const cadastroUsuario = async (req, res) => {
 
     const validationError = formValidator(nome, cpf, rg, email, senha, confirmarSenha);
     if (validationError) {
-        res.render('cadastro', { mensagem_erro: validationError })
+        res.render('cadastro', { mensagem_erro: validationError, nome: nome, email: email, cpf: cpf, rg: rg })
         return;
     }
 
@@ -46,14 +44,23 @@ export const cadastroUsuario = async (req, res) => {
     const query_emailVerification = "SELECT usuario_id FROM usuario WHERE email=?";
 
     try {
-        const cpfAlreadyRegistered = await checkIfAlreadyRegistered(query_cpfVerification, cpf, "CPF já cadastrado", res);
-        if (cpfAlreadyRegistered) return;
+        const cpfAlreadyRegistered = await checkIfAlreadyRegistered(query_cpfVerification, cpf, res);
+        if (cpfAlreadyRegistered) {
+            res.render('cadastro', { mensagem_erro: "CPF já está em uso!", nome: nome, email: email, cpf: cpf, rg: rg })
+            return;
+        }
 
-        const rgAlreadyRegistered = await checkIfAlreadyRegistered(query_rgVerification, rg, "RG já cadastrado", res);
-        if (rgAlreadyRegistered) return;
+        const rgAlreadyRegistered = await checkIfAlreadyRegistered(query_rgVerification, rg, res);
+        if (rgAlreadyRegistered) {
+            res.render('cadastro', { mensagem_erro: "RG já está em uso", nome: nome, email: email, cpf: cpf, rg: rg })
+            return;
+        }
 
-        const emailAlreadyRegistered = await checkIfAlreadyRegistered(query_emailVerification, email, "Email já cadastrado", res);
-        if (emailAlreadyRegistered) return;
+        const emailAlreadyRegistered = await checkIfAlreadyRegistered(query_emailVerification, email, res);
+        if (emailAlreadyRegistered) {
+            res.render('cadastro', { mensagem_erro: "Email já está em uso", nome: nome, email: email, cpf: cpf, rg: rg })
+            return;
+        }
 
         db.query(query_insert, [valores], (error) => {
             if (error) {
