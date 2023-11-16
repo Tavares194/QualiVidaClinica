@@ -9,8 +9,7 @@ fetch('/login')
   })
   .catch(error => console.error('Error fetching data:', error));
 
-
-function setUpLoginForm() {
+async function setUpLoginForm() {
   const loginForm = document.querySelector('#login-form');
   const errorDiv = document.querySelector('.error-message');
   const emailInput = document.querySelector('#email');
@@ -26,10 +25,10 @@ function setUpLoginForm() {
     errorDiv.innerText = '';
   });
 
-  loginForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
+  const errorMessages = await fetchErrorMessages(preferredLanguage);
 
-    const errorMessages = await fetchErrorMessages(preferredLanguage);
+  loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
 
     let formError;
 

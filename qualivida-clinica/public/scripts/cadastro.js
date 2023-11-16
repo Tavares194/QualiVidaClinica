@@ -9,8 +9,7 @@ fetch('/login')
   })
   .catch(error => console.error('Error fetching data:', error));
 
-
-function setUpSignupForm() {
+async function setUpSignupForm() {
   const cadastroForm = document.querySelector('#cadastro-form');
   const nomeInput = document.querySelector('#nome');
   const cpfInput = document.querySelector('#cpf');
@@ -80,10 +79,10 @@ function setUpSignupForm() {
     return emailRegex.test(email);
   }
 
-  cadastroForm.addEventListener('submit', async event => {
-    event.preventDefault();
+  const errorMessages = await fetchErrorMessages(preferredLanguage);
 
-    const errorMessages = await fetchErrorMessages(preferredLanguage);
+  cadastroForm.addEventListener('submit', event => {
+    event.preventDefault();
 
     const inputs = document.querySelectorAll('input');
     let formError;
