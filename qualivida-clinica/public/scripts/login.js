@@ -10,20 +10,18 @@ fetch('/login')
   .catch(error => console.error('Error fetching data:', error));
 
 async function setUpLoginForm() {
+
+  const inputs = document.querySelectorAll('input');
   const loginForm = document.querySelector('#login-form');
   const errorDiv = document.querySelector('.error-message');
   const emailInput = document.querySelector('#email');
   const passwordInput = document.querySelector('#senha');
 
-  emailInput.addEventListener('focus', event => {
-    emailInput.classList.remove('is-invalid');
-    errorDiv.innerText = '';
-  });
-
-  passwordInput.addEventListener('focus', event => {
-    passwordInput.classList.remove('is-invalid');
-    errorDiv.innerText = '';
-  });
+  inputs.forEach(input => {
+    input.addEventListener("focus", event => {
+      event.target.classList.remove('is-invalid');
+    })
+  })
 
   const errorMessages = await fetchErrorMessages(preferredLanguage);
 

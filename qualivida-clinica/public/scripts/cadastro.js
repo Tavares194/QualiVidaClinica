@@ -10,6 +10,7 @@ fetch('/login')
   .catch(error => console.error('Error fetching data:', error));
 
 async function setUpSignupForm() {
+  const inputs = document.querySelectorAll('input');
   const cadastroForm = document.querySelector('#cadastro-form');
   const nomeInput = document.querySelector('#nome');
   const cpfInput = document.querySelector('#cpf');
@@ -19,29 +20,10 @@ async function setUpSignupForm() {
   const confirmPasswordInput = document.querySelector('#confirmarSenha');
   const errorDiv = document.querySelector('.error-message');
 
-  nomeInput.addEventListener('focus', event => {
-    nomeInput.classList.remove('is-invalid')
-  })
-
-  cpfInput.addEventListener('focus', event => {
-    cpfInput.classList.remove('is-invalid')
-  })
-
-  rgInput.addEventListener('focus', event => {
-    rgInput.classList.remove('is-invalid')
-  })
-
-  emailInput.addEventListener('focus', event => {
-    emailInput.classList.remove('is-invalid')
-  })
-
-  passwordInput.addEventListener('focus', event => {
-    passwordInput.classList.remove('is-invalid')
-  })
-
-  confirmPasswordInput.addEventListener('focus', event => {
-    passwordInput.classList.remove('is-invalid');
-    confirmPasswordInput.classList.remove('is-invalid')
+  inputs.forEach(input => {
+    input.addEventListener("focus", event => {
+      event.target.classList.remove('is-invalid');
+    })
   })
 
   function isPasswordValid(password) {
