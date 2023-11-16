@@ -1,53 +1,64 @@
-let currentLanguage = navigator.language;
+let preferredLanguage;
 
-const loginForm = document.querySelector('#login-form');
-const errorDiv = document.querySelector('.error-message');
-const emailInput = document.querySelector('#email');
-const passwordInput = document.querySelector('#senha');
+fetch('/login')
+  .then(response => {
+    preferredLanguage = response.headers.get('X-Preferred-Language');
+    console.log('Preferred Language:', preferredLanguage);
 
-emailInput.addEventListener('focus', event => {
-  emailInput.classList.remove('is-invalid');
-  errorDiv.innerText = '';
-});
+    setUpLoginForm();
+  })
+  .catch(error => console.error('Error fetching data:', error));
 
-passwordInput.addEventListener('focus', event => {
-  passwordInput.classList.remove('is-invalid');
-  errorDiv.innerText = '';
-});
 
-loginForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
+function setUpLoginForm() {
+  const loginForm = document.querySelector('#login-form');
+  const errorDiv = document.querySelector('.error-message');
+  const emailInput = document.querySelector('#email');
+  const passwordInput = document.querySelector('#senha');
 
-  const errorMessages = await fetchErrorMessages(currentLanguage);
-  if (!errorMessages)
-    errorMessages = await fetchErrorMessages('pt-BR');
+  emailInput.addEventListener('focus', event => {
+    emailInput.classList.remove('is-invalid');
+    errorDiv.innerText = '';
+  });
 
-  let formError;
+  passwordInput.addEventListener('focus', event => {
+    passwordInput.classList.remove('is-invalid');
+    errorDiv.innerText = '';
+  });
 
-  if (!emailInput.value && !passwordInput.value) {
-    formError = errorMessages.empty_fields;
-    errorDiv.innerText = formError;
-    emailInput.classList.add('is-invalid');
-    passwordInput.classList.add('is-invalid');
-    return;
-  }
+  loginForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-  if (!emailInput.value) {
-    formError = errorMessages.empty_email;
-    errorDiv.innerText = formError;
-    emailInput.classList.add('is-invalid');
-    return;
-  }
+    const errorMessages = await fetchErrorMessages(preferredLanguage);
 
-  if (!passwordInput.value) {
-    formError = errorMessages.empty_password;
-    errorDiv.innerText = formError;
-    passwordInput.classList.add('is-invalid');
-    return;
-  }
+    let formError;
 
-  loginForm.submit();
-});
+    if (!emailInput.value && !passwordInput.value) {
+      formError = errorMessages.empty_fields;
+      errorDiv.innerText = formError;
+      emailInput.classList.add('is-invalid');
+      passwordInput.classList.add('is-invalid');
+      return;
+    }
+
+    if (!emailInput.value) {
+      formError = errorMessages.empty_email;
+      errorDiv.innerText = formError;
+      emailInput.classList.add('is-invalid');
+      return;
+    }
+
+    if (!passwordInput.value) {
+      formError = errorMessages.empty_password;
+      errorDiv.innerText = formError;
+      passwordInput.classList.add('is-invalid');
+      return;
+    }
+
+    loginForm.submit();
+  });
+}
+
 
 async function fetchErrorMessages(language) {
   try {

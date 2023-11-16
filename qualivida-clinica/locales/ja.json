@@ -1,0 +1,58 @@
+{
+    "common": {
+        "home": "ホーム",
+        "specialties": "専門分野",
+        "our-services": "当院のサービス",
+        "our-staff": "スタッフ",
+        "about-us": "当院について",
+        "login": "ログイン",
+        "signup": "サインアップ",
+        "logout": "ログアウト",
+        "profile": "マイプロフィール",
+        "appointments": "予約",
+        "tests": "検査"
+    },
+    "home": {
+        "title": "ホーム",
+        "welcome": "QualiVidaへようこそ",
+        "starting-at": "予約開始価格 R$XXX,XX",
+        "book": "予約する"
+    },
+    "login": {
+        "title": "ログイン",
+        "email": "メールアドレス",
+        "password": "パスワード",
+        "remember-me": "ログイン情報を記憶",
+        "login": "ログイン"
+    },
+    "signup": {
+        "title": "サインアップ",
+        "full-name": "氏名",
+        "email": "メールアドレス",
+        "cpf": "CPF",
+        "id": "ID",
+        "password": "パスワード",
+        "confirm-password": "パスワード確認",
+        "signup": "サインアップ",
+        "password_requirements": "パスワードは8文字以上、数字、大文字、小文字を含む必要があります。"
+    },
+    "errors": {
+        "login": {
+            "invalid-credentials": "無効なメールアドレスまたはパスワード",
+            "empty_email": "メールアドレスを入力してください",
+            "empty_password": "パスワードを入力してください",
+            "empty_fields": "全ての項目を入力してください"
+        },
+        "signup": {
+            "empty_fields": "全ての項目を入力してください",
+            "invalid_email": "無効なメールアドレス",
+            "invalid_password": "パスワードの要件を満たしていません",
+            "match_password": "パスワードが一致しません",
+            "invalid_cpf": "無効なCPF",
+            "invalid_id": "無効なID",
+            "existing_cpf": "他のアカウントで既に使用されているCPF",
+            "existing_id": "他のアカウントで既に使用されているID",
+            "existing_email": "他のアカウントで既に使用されているメールアドレス"
+        }
+    }
+}

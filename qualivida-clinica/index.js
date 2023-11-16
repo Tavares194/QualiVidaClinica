@@ -27,8 +27,10 @@ app.use(session({
   saveUninitialized: true,
 }));
 
+const langs = ['de', 'en', 'es', 'fr', 'ja', 'pt-BR'];
+
 i18n.configure({
-  locales: ['en-US', 'pt-BR'],
+  locales: [...langs],
   defaultLocale: 'pt-BR',
   directory: path.join(__dirname, 'locales'),
   objectNotation: true,
@@ -37,7 +39,8 @@ i18n.configure({
 app.use(i18n.init);
 
 app.use((req, res, next) => {
-  const preferredLanguage = req.acceptsLanguages('pt-BR', 'en-US');
+  const preferredLanguage = req.acceptsLanguages([...langs]);
+  res.setHeader('X-Preferred-Language', preferredLanguage);
   req.setLocale(preferredLanguage);
   next();
 });
