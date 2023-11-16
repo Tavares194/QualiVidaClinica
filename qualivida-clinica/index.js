@@ -27,7 +27,7 @@ app.use(session({
   saveUninitialized: true,
 }));
 
-const langs = ['de', 'en', 'es', 'fr', 'ja', 'pt-BR'];
+const langs = ['de', 'en', 'es', 'fr', 'ja', 'pt-BR', 'zh'];
 
 i18n.configure({
   locales: [...langs],
