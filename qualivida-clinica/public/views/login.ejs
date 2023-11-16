@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= lang %>">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Arvo:wght@400;700&family=Inconsolata:wght@400;700&display=swap"
         rel="stylesheet" />
+
+    <style>
+        body {
+            direction: <%=dir %>;
+        }
+    </style>
 </head>
 
 <body>
@@ -83,8 +89,8 @@
                 </div>
 
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="Check">
-                    <label class="form-check-label" for="Check">
+                    <input type="checkbox" class="form-check-input" id="remember-me" name="remember-me">
+                    <label class="form-check-label" for="remember-me">
                         <%= __("login.remember-me") %>
                     </label>
                 </div>

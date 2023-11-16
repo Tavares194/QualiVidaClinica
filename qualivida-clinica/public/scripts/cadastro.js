@@ -9,12 +9,14 @@ fetch('/login')
   })
   .catch(error => console.error('Error fetching data:', error));
 
+
+const cpfInput = document.querySelector('#cpf');
+const rgInput = document.querySelector('#rg');
+
 async function setUpSignupForm() {
   const inputs = document.querySelectorAll('input');
   const cadastroForm = document.querySelector('#cadastro-form');
   const nomeInput = document.querySelector('#nome');
-  const cpfInput = document.querySelector('#cpf');
-  const rgInput = document.querySelector('#rg');
   const emailInput = document.querySelector('#email');
   const passwordInput = document.querySelector('#senha');
   const confirmPasswordInput = document.querySelector('#confirmarSenha');

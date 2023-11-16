@@ -15,6 +15,7 @@ import routesLogin from "./routes/routesLogin.js";
 import routesHome from "./routes/routesHome.js";
 import routesCadastro from "./routes/routesCadastro.js";
 import routesEspecialidades from "./routes/routesEspecialidades.js";
+import { languageMiddleware } from "./middleware/languageMiddleware.js";
 
 const app = express();
 const port = 8081;
@@ -58,6 +59,8 @@ app.use(express.static('public'));
 app.use('/locales', express.static(path.join('locales')));
 app.use(express.urlencoded({ extended: true }));
 app.use(serveFavicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use(languageMiddleware);
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'public', 'views'));

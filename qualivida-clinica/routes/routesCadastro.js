@@ -1,6 +1,6 @@
 import express from "express";
 import { getPage, cadastroUsuario } from "../controllers/cadastroController.js";
-import { checkLoggedIn } from "./authMiddleware.js";
+import { checkLoggedIn } from "../middleware/authMiddleware.js";
 
 const routes = express.Router();
 
