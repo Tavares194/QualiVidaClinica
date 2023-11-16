@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QualiVida &VerticalLine; Cadastro</title>
+    <title>QualiVida &VerticalLine; <%= __("signup.title") %>
+    </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="../styles/general.css">
@@ -25,19 +26,32 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-secondary">Início</a></li>
-                    <li><a href="#" class="nav-link px-2 text-black">Especialidades</a></li>
-                    <li><a href="#" class="nav-link px-2 text-black">Serviços</a></li>
-                    <li><a href="#" class="nav-link px-2 text-black">Profissionais</a></li>
-                    <li><a href="#" class="nav-link px-2 text-black">Sobre</a></li>
+                    <li><a href="#" class="nav-link px-2 text-secondary">
+                            <%= __("common.home") %>
+                        </a></li>
+                    <li><a href="#" class="nav-link px-2 text-black">
+                            <%= __("common.specialties") %>
+                        </a></li>
+                    <li><a href="#" class="nav-link px-2 text-black">
+                            <%= __("common.our-services") %>
+                        </a></li>
+                    <li><a href="#" class="nav-link px-2 text-black">
+                            <%= __("common.our-staff") %>
+                        </a></li>
+                    <li><a href="#" class="nav-link px-2 text-black">
+                            <%= __("common.about-us") %>
+                        </a></li>
                 </ul>
 
                 <div class="text-end">
                     <a href="/login" class="text-decoration-none">
-                        <button type="button" class="btn btn-outline-dark me-2">Login</button>
+                        <button type="button" class="btn btn-outline-dark me-2">
+                            <%= __("common.login") %>
+                        </button>
                     </a>
                     <a href="/cadastro" class="ext-decoration-none"">
-                        <button type=" button" class="btn btn-primary">Cadastro</button>
+                        <button type=" button" class="btn btn-primary">
+                        <%= __("common.signup") %></button>
                     </a>
                 </div>
             </div>
@@ -56,18 +70,24 @@
                 <div class="d-flex justify-content-between">
                     <div class="me-4">
                         <div class="form-group mb-3">
-                            <label for="InputNome">Nome Completo:</label>
+                            <label for="InputNome">
+                                <%= __("signup.full-name") %>:
+                            </label>
                             <input type="text" class="form-control" id="nome" name="nome"
                                 value="<%= typeof formData !== 'undefined' ? formData.nome : '' %>">
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="InputCPF">CPF:</label>
+                            <label for="InputCPF">
+                                <%= __("signup.cpf") %>:
+                            </label>
                             <input type="text" class="form-control" id="cpf" name="cpf"
                                 value="<%= typeof formData !== 'undefined' ? formData.cpf : '' %>">
                         </div>
                         <div class="form-group mb-3">
-                            <label for="InputRG">RG:</label>
+                            <label for="InputRG">
+                                <%= __("signup.id") %>:
+                            </label>
                             <input type="text" class="form-control" id="rg" name="rg"
                                 value="<%= typeof formData !== 'undefined' ? formData.rg : '' %>">
                         </div>
@@ -75,16 +95,22 @@
 
                     <div>
                         <div class="form-group mb-3">
-                            <label for="InputEmail">Email:</label>
+                            <label for="InputEmail">
+                                <%= __("signup.email") %>:
+                            </label>
                             <input type="email" class="form-control" id="email" name="email"
                                 value="<%= typeof formData !== 'undefined' ? formData.email : '' %>">
                         </div>
                         <div class="form-group mb-3">
-                            <label for="InputPassword">Senha:</label>
+                            <label for="InputPassword">
+                                <%= __("signup.password") %>:
+                            </label>
                             <input type="password" class="form-control" id="senha" name="senha">
                         </div>
                         <div class="form-group mb-3">
-                            <label for="InputConfirmPassword">Confirmar senha:</label>
+                            <label for="InputConfirmPassword">
+                                <%= __("signup.confirm-password") %>:
+                            </label>
                             <input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha">
                         </div>
 
@@ -92,13 +118,13 @@
 
                 </div>
 
-                <% if (typeof mensagem_erro !=='undefined' ) { %>
-                    <div class="error-message text-sm text-danger text-center mt-4">
-                        <%= mensagem_erro %>
-                    </div>
-                    <% } %>
+                <div class="error-message text-sm text-danger text-center mt-4">
+                    <%= typeof mensagem_erro !=='undefined' ? error : '' %>
+                </div>
 
-                        <button type="submit" class="btn text-white w-100 mt-4">Cadastrar</button>
+                <button type="submit" class="btn text-white w-100 mt-4">
+                    <%= __("signup.signup") %>
+                </button>
             </form>
         </div>
     </main>

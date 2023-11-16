@@ -1,0 +1,58 @@
+{
+	"common": {
+		"home": "Início",
+		"specialties": "Especialidades",
+		"our-services": "Nossos Serviços",
+		"our-staff": "Profissionais",
+		"about-us": "Sobre",
+		"login": "Entrar",
+		"signup": "Cadastro",
+		"logout": "Sair",
+		"profile": "Meu Perfil",
+		"appointments": "Minhas Consultas",
+		"tests": "Meus Exames"
+	},
+	"home": {
+		"title": "Início",
+		"welcome": "Bem-vindo à QualiVida",
+		"starting-at": "Consultas à partir de R$XXX,XX",
+		"book": "Agendar Consulta"
+	},
+	"login": {
+		"title": "Entrar",
+		"email": "Email",
+		"password": "Senha",
+		"remember-me": "Lembrar-me",
+		"login": "Entrar"
+	},
+	"signup": {
+		"title": "Cadastro",
+		"full-name": "Nome Completo",
+		"email": "Email",
+		"cpf": "CPF",
+		"id": "RG",
+		"password": "Senha",
+		"confirm-password": "Confirmar Senha",
+		"signup": "Cadastrar"
+	},
+	"errors": {
+		"login": {
+			"invalid-credentials": "Email e/ou senha inválidos",
+			"empty_email": "Preencha o campo email",
+			"empty_password": "Preencha o campo senha",
+			"empty_fields": "Preencha todos os campos",
+			"enter-email": "errors.login.enter-email"
+		},
+		"signup": {
+			"empty_fields": "Preencha todos os campos!",
+			"invalid_email": "Email inválido!",
+			"invalid_password": "A senha não atende aos requisitos!",
+			"match_password": "As senhas não coincidem!",
+			"invalid_cpf": "CPF Inválido!",
+			"invalid_id": "RG Inválido",
+			"existing_cpf": "CPF já associado em outra conta",
+			"existing_id": "RG já associado em outra conta",
+			"existing_email": "Email já associado em outra conta"
+		}
+	}
+}

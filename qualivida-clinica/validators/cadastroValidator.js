@@ -24,6 +24,11 @@ function validateCPF(strCPF) {
   return true;
 }
 
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
 export const formValidator = function (valores) {
   let formError = null;
 
@@ -36,29 +41,34 @@ export const formValidator = function (valores) {
   })
 
   if (hasEmptyField || valoresArray.length !== 6) {
-    formError = 'Todos os campos devem ser preenchidos!';
+    formError = 'errors.signup.empty_fields';
+    return formError;
+  }
+
+  if (!isValidEmail(valores.email)) {
+    formError = 'errors.signup.invalid_email';
     return formError;
   }
 
   if (!isPasswordValid(valores.senha)) {
-    formError = 'A senha criada não atende aos requisitos!';
+    formError = 'errors.signup.invalid_password';
     return formError;
   }
 
   if (valores.senha != valores.confirmarSenha) {
-    formError = 'As senhas não coincidem!';
+    formError = 'errors.signup.match_password';
     return formError;
   }
 
   if (!validateCPF(valores.cpf)) {
-    formError = 'CPF Inválido!';
+    formError = 'errors.signup.invalid_cpf';
     return formError;
   }
 
   if (valores.rg.length !== 9) {
-    formError = 'RG Inválido!';
+    formError = 'errors.signup.invalid_id';
     return formError;
   }
 
-  return null;
+  return formError;
 }

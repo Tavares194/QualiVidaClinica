@@ -40,7 +40,7 @@ input[type="checkbox"]:checked {
 }
 
 .login-logo-img {
-    width: 50%;
+    width: 40%;
     stroke: var(--color2);
     fill: var(--color2)
 }

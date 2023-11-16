@@ -1,3 +1,6 @@
+let currentLanguage = navigator.language;
+console.log(currentLanguage)
+
 const cadastroForm = document.querySelector('#cadastro-form');
 const nomeInput = document.querySelector('#nome');
 const cpfInput = document.querySelector('#cpf');
@@ -28,6 +31,7 @@ passwordInput.addEventListener('focus', event => {
 })
 
 confirmPasswordInput.addEventListener('focus', event => {
+  passwordInput.classList.remove('is-invalid');
   confirmPasswordInput.classList.remove('is-invalid')
 })
 
@@ -61,8 +65,17 @@ function validateCPF(strCPF) {
   return true;
 }
 
-cadastroForm.addEventListener('submit', event => {
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+cadastroForm.addEventListener('submit', async event => {
   event.preventDefault();
+
+  const errorMessages = await fetchErrorMessages(currentLanguage);
+  if (!errorMessages)
+    errorMessages = await fetchErrorMessages('en-US');
 
   const inputs = document.querySelectorAll('input');
   let formError;
@@ -76,19 +89,29 @@ cadastroForm.addEventListener('submit', event => {
   })
 
   if (hasEmptyField) {
-    formError = 'Todos os campos devem ser preenchidos!';
+    formError = errorMessages.empty_fields;
     renderError(formError);
     return;
   }
 
+  if (!isValidEmail(emailInput.value)) {
+    emailInput.classList.add('is-invalid');
+    formError = errorMessages.invalid_email;
+    renderError(formError)
+    return;
+  }
+
   if (!isPasswordValid(passwordInput.value)) {
-    formError = 'A senha criada não atende aos requisitos!';
+    passwordInput.classList.add('is-invalid');
+    formError = errorMessages.invalid_password;
     renderError(formError);
     return;
   }
 
   if (confirmPasswordInput.value != passwordInput.value) {
-    formError = 'As senhas não coincidem!';
+    passwordInput.classList.add('is-invalid');
+    confirmPasswordInput.classList.add('is-invalid');
+    formError = errorMessages.match_password;
     renderError(formError);
     return;
   }
@@ -96,7 +119,8 @@ cadastroForm.addEventListener('submit', event => {
   cpfInput.value = cpfInput.value.replace(/[.-]/g, '');
 
   if (!validateCPF(cpfInput.value)) {
-    formError = 'CPF Inválido!';
+    cpfInput.classList.add('is-invalid');
+    formError = errorMessages.invalid_cpf;
     renderError(formError)
     return;
   }
@@ -104,7 +128,8 @@ cadastroForm.addEventListener('submit', event => {
   rgInput.value = rgInput.value.replace(/[.-]/g, '');
 
   if (rgInput.value.length !== 9) {
-    formError = 'RG Inválido!';
+    rgInput.classList.add('is-invalid');
+    formError = errorMessages.invalid_id;
     renderError(formError);
     return;
   }
@@ -138,3 +163,19 @@ rgInput.addEventListener('input', function () {
   if (v.length == 2 || v.length == 6) this.value += ".";
   if (v.length == 10) this.value += "-";
 });
+
+async function fetchErrorMessages(language) {
+  try {
+    const response = await fetch(`locales/${language}.json`);
+    const allErrorMessages = await response.json();
+
+    const loginErrorMessages = allErrorMessages.errors && allErrorMessages.errors.signup
+      ? allErrorMessages.errors.login
+      : {};
+
+    return loginErrorMessages;
+  } catch (error) {
+    console.error('Error fetching error messages:', error);
+    return {};
+  }
+}

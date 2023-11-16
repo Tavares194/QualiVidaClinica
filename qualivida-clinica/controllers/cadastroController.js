@@ -36,7 +36,7 @@ export const cadastroUsuario = async (req, res) => {
 
     const validationError = formValidator(valores);
     if (validationError) {
-        res.render('cadastro', { mensagem_erro: validationError, formData })
+        res.render('cadastro', { mensagem_erro: req.__(validationError), formData })
         return;
     }
 
@@ -44,21 +44,21 @@ export const cadastroUsuario = async (req, res) => {
         const query_cpfVerification = "SELECT usuario_id FROM usuario WHERE cpf=?";
         const cpfAlreadyRegistered = await checkIfAlreadyRegistered(query_cpfVerification, valores.cpf, res);
         if (cpfAlreadyRegistered) {
-            res.render('cadastro', { mensagem_erro: "CPF já está em uso!", formData })
+            res.render('cadastro', { mensagem_erro: req.__(errors.signup.existing_cpf), formData })
             return;
         }
 
         const query_rgVerification = "SELECT usuario_id FROM usuario WHERE rg=?";
         const rgAlreadyRegistered = await checkIfAlreadyRegistered(query_rgVerification, valores.rg, res);
         if (rgAlreadyRegistered) {
-            res.render('cadastro', { mensagem_erro: "RG já está em uso", formData })
+            res.render('cadastro', { mensagem_erro: req.__(errors.signup.existing_id), formData })
             return;
         }
 
         const query_emailVerification = "SELECT usuario_id FROM usuario WHERE email=?";
         const emailAlreadyRegistered = await checkIfAlreadyRegistered(query_emailVerification, valores.email, res);
         if (emailAlreadyRegistered) {
-            res.render('cadastro', { mensagem_erro: "Email já está em uso", formData })
+            res.render('cadastro', { mensagem_erro: req.__(errors.signup.email), formData })
             return;
         }
 

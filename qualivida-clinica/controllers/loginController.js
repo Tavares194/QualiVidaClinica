@@ -54,7 +54,7 @@ export const loginUsuario = async (req, res) => {
                 return;
             }
         }
-        res.render('login', { error: "Email e/ou senha inválidos", email: email })
+        res.render('login', { error: req.__("errors.login.invalid-credentials"), email: email })
         return;
     });
 }

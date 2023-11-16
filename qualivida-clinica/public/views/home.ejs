@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QualiVida &VerticalLine; Home</title>
+    <title>QualiVida &VerticalLine; <%= __("home.title") %>
+    </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="../styles/general.css">
@@ -25,11 +26,21 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-secondary">Início</a></li>
-                    <li><a href="#" class="nav-link px-2 text-black">Especialidades</a></li>
-                    <li><a href="#" class="nav-link px-2 text-black">Serviços</a></li>
-                    <li><a href="#" class="nav-link px-2 text-black">Profissionais</a></li>
-                    <li><a href="#" class="nav-link px-2 text-black">Sobre</a></li>
+                    <li><a href="#" class="nav-link px-2 text-secondary">
+                            <%= __("common.home") %>
+                        </a></li>
+                    <li><a href="#" class="nav-link px-2 text-black">
+                            <%= __("common.specialties") %>
+                        </a></li>
+                    <li><a href="#" class="nav-link px-2 text-black">
+                            <%= __("common.our-services") %>
+                        </a></li>
+                    <li><a href="#" class="nav-link px-2 text-black">
+                            <%= __("common.our-staff") %>
+                        </a></li>
+                    <li><a href="#" class="nav-link px-2 text-black">
+                            <%= __("common.about-us") %>
+                        </a></li>
                 </ul>
 
                 <% if (typeof username !=='undefined' ) { %>
@@ -45,23 +56,35 @@
                         <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1"
                             style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 34px);"
                             data-popper-placement="bottom-start">
-                            <li><a class="dropdown-item" href="#">Meu Perfil</a></li>
-                            <li><a class="dropdown-item" href="#">Minhas Consultas</a></li>
-                            <li><a class="dropdown-item" href="#">Meus Exames</a></li>
+                            <li><a class="dropdown-item" href="#">
+                                    <%= __("common.profile") %>
+                                </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                    <%= __("common.appointments") %>
+                                </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                    <%= __("common.tests") %>
+                                </a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li id="logout"><a class="dropdown-item" href="#">Sair</a></li>
+                            <li id="logout"><a class="dropdown-item" href="#">
+                                    <%= __("common.logout") %>
+                                </a></li>
                         </ul>
                     </div>
 
                     <% } else { %>
                         <div class="text-end">
                             <a href="/login" class="text-decoration-none">
-                                <button type="button" class="btn btn-outline-dark me-2">Login</button>
+                                <button type="button" class="btn btn-outline-dark me-2">
+                                    <%= __("common.login") %>
+                                </button>
                             </a>
                             <a href="/cadastro" class="ext-decoration-none">
-                                <button type=" button" class="btn btn-primary">Cadastro</button>
+                                <button type=" button" class="btn btn-primary">
+                                    <%= __("common.signup") %>
+                                </button>
                             </a>
                         </div>
                         <% } %>
@@ -71,11 +94,17 @@
 
     <main>
         <div class="w=100 vh-100 d-flex flex-column justify-content-center align-items-center text-white fs-1">
-            <h1 style="font-size: 130px;">Bem Vindo à QualiVida!</h1>
-            <h1 style="font-size: 45px;">Consultas a partir de xxxxx</h1>
+            <h1 style="font-size: 130px;">
+                <%= __("home.welcome") %>
+            </h1>
+            <h1 style="font-size: 45px;">
+                <%= __("home.starting-at") %>
+            </h1>
             <br>
             <div class="text-center">
-                <button type="button" class="agendar btn btn-outline-dark">Agendar</button>
+                <button type="button" class="agendar btn btn-outline-dark">
+                    <%= __("home.book") %>
+                </button>
             </div>
         </div>
     </main>

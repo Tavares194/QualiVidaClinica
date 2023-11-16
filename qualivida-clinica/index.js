@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import session from "express-session";
+import i18n from "i18n";
 import serveFavicon from "serve-favicon";
 
 import { fileURLToPath } from 'url';
@@ -26,6 +27,21 @@ app.use(session({
   saveUninitialized: true,
 }));
 
+i18n.configure({
+  locales: ['en-US', 'pt-BR'],
+  defaultLocale: 'pt-BR',
+  directory: path.join(__dirname, 'locales'),
+  objectNotation: true,
+});
+
+app.use(i18n.init);
+
+app.use((req, res, next) => {
+  const preferredLanguage = req.acceptsLanguages('pt-BR', 'en-US');
+  req.setLocale(preferredLanguage);
+  next();
+});
+
 const corsOptions = {
   origin: `http://localhost:${port}`,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -36,6 +52,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use(express.static('public'));
+app.use('/locales', express.static(path.join('locales')));
 app.use(express.urlencoded({ extended: true }));
 app.use(serveFavicon(path.join(__dirname, 'public', 'favicon.ico')))
 
