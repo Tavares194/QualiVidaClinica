@@ -22,7 +22,7 @@
 		"title": "Login",
 		"email": "Email",
 		"password": "Password",
-		"remember-me": "Remember Me",
+		"remember-me": "Remember me",
 		"login": "Log in"
 	},
 	"signup": {

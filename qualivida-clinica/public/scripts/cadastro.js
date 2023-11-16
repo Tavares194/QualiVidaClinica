@@ -170,7 +170,7 @@ async function fetchErrorMessages(language) {
     const allErrorMessages = await response.json();
 
     const loginErrorMessages = allErrorMessages.errors && allErrorMessages.errors.signup
-      ? allErrorMessages.errors.login
+      ? allErrorMessages.errors.signup
       : {};
 
     return loginErrorMessages;
