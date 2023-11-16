@@ -34,7 +34,7 @@
 		"password": "Password",
 		"confirm-password": "Confirm Password",
 		"signup": "Sign Up",
-		"password_requirements": "Your password must contain at least 8 characters, one number, an uppercase letter and a lowercase letter"
+		"password_requirements": "Your password must contain at least 8 characters, one number, an uppercase letter and a lowercase letter."
 	},
 	"errors": {
 		"login": {
