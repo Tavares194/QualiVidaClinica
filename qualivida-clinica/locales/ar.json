@@ -1,0 +1,58 @@
+{
+    "common": {
+        "home": "الرئيسية",
+        "specialties": "التخصصات",
+        "our-services": "خدماتنا",
+        "our-staff": "طاقمنا",
+        "about-us": "عنا",
+        "login": "تسجيل الدخول",
+        "signup": "التسجيل",
+        "logout": "تسجيل الخروج",
+        "profile": "ملفي",
+        "appointments": "مواعيدي",
+        "tests": "اختباراتي"
+    },
+    "home": {
+        "title": "الرئيسية",
+        "welcome": "مرحبًا بك في QualiVida",
+        "starting-at": "الاستشارات تبدأ من R$XXX,XX",
+        "book": "حجز استشارة"
+    },
+    "login": {
+        "title": "تسجيل الدخول",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "remember-me": "تذكرني",
+        "login": "تسجيل الدخول"
+    },
+    "signup": {
+        "title": "التسجيل",
+        "full-name": "الاسم الكامل",
+        "email": "البريد الإلكتروني",
+        "cpf": "CPF",
+        "id": "الهوية",
+        "password": "كلمة المرور",
+        "confirm-password": "تأكيد كلمة المرور",
+        "signup": "التسجيل",
+        "password_requirements": "يجب أن تحتوي كلمة المرور على ما لا يقل عن 8 أحرف، ورقم، وحرف كبير، وحرف صغير."
+    },
+    "errors": {
+        "login": {
+            "invalid-credentials": "البريد الإلكتروني و/أو كلمة المرور غير صحيحة",
+            "empty_email": "يرجى ملء حقل البريد الإلكتروني",
+            "empty_password": "يرجى ملء حقل كلمة المرور",
+            "empty_fields": "يرجى ملء جميع الحقول"
+        },
+        "signup": {
+            "empty_fields": "يرجى ملء جميع الحقول",
+            "invalid_email": "بريد إلكتروني غير صحيح",
+            "invalid_password": "كلمة المرور لا تلبي الاشتراطات",
+            "match_password": "كلمتا المرور غير متطابقتين",
+            "invalid_cpf": "CPF غير صالح",
+            "invalid_id": "هوية غير صالحة",
+            "existing_cpf": "CPF مرتبط بالفعل بحساب آخر",
+            "existing_id": "هوية مرتبطة بالفعل بحساب آخر",
+            "existing_email": "البريد الإلكتروني مرتبط بالفعل بحساب آخر"
+        }
+    }
+}

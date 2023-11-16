@@ -1,0 +1,58 @@
+{
+    "common": {
+        "home": "होम",
+        "specialties": "विशेषज्ञता",
+        "our-services": "हमारी सेवाएं",
+        "our-staff": "हमारा कर्मचारी",
+        "about-us": "हमारे बारे में",
+        "login": "लॉग इन",
+        "signup": "साइन अप",
+        "logout": "लॉग आउट",
+        "profile": "मेरा प्रोफाइल",
+        "appointments": "मेरे अपॉइंटमेंट्स",
+        "tests": "मेरे टेस्ट"
+    },
+    "home": {
+        "title": "होम",
+        "welcome": "QualiVida में आपका स्वागत है",
+        "starting-at": "अपॉइंटमेंट्स शुरू होते हैं R$XXX,XX से",
+        "book": "अपॉइंटमेंट बुक करें"
+    },
+    "login": {
+        "title": "लॉग इन",
+        "email": "ईमेल",
+        "password": "पासवर्ड",
+        "remember-me": "मुझे याद रखें",
+        "login": "लॉग इन"
+    },
+    "signup": {
+        "title": "साइन अप",
+        "full-name": "पूरा नाम",
+        "email": "ईमेल",
+        "cpf": "CPF",
+        "id": "आईडी",
+        "password": "पासवर्ड",
+        "confirm-password": "पासवर्ड की पुष्टि करें",
+        "signup": "साइन अप करें",
+        "password_requirements": "आपका पासवर्ड कम से कम 8 अक्षर, एक संख्या, एक बड़ा अक्षर और एक छोटा अक्षर होना चाहिए।"
+    },
+    "errors": {
+        "login": {
+            "invalid-credentials": "ईमेल और/या पासवर्ड अमान्य हैं",
+            "empty_email": "ईमेल फील्ड भरें",
+            "empty_password": "पासवर्ड फील्ड भरें",
+            "empty_fields": "सभी फ़ील्ड भरें"
+        },
+        "signup": {
+            "empty_fields": "सभी फ़ील्ड भरें",
+            "invalid_email": "अमान्य ईमेल",
+            "invalid_password": "पासवर्ड आवश्यकताओं को पूरा नहीं करता",
+            "match_password": "पासवर्ड मेल नहीं खाता",
+            "invalid_cpf": "अमान्य CPF",
+            "invalid_id": "अमान्य आईडी",
+            "existing_cpf": "CPF पहले से ही अन्य खाते से जुड़ा हुआ है",
+            "existing_id": "आईडी पहले से ही अन्य खाते से जुड़ा हुआ है",
+            "existing_email": "ईमेल पहले से ही अन्य खाते से जुड़ा हुआ है"
+        }
+    }
+}
