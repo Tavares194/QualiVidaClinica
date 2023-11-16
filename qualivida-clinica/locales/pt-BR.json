@@ -33,15 +33,15 @@
 		"id": "RG",
 		"password": "Senha",
 		"confirm-password": "Confirmar Senha",
-		"signup": "Cadastrar"
+		"signup": "Cadastrar",
+		"password_requirements": "Sua senha deve conter no mínimo 8 caracteres, um número, uma letra maiúscula e uma letra minúscula."
 	},
 	"errors": {
 		"login": {
 			"invalid-credentials": "Email e/ou senha inválidos",
 			"empty_email": "Preencha o campo email",
 			"empty_password": "Preencha o campo senha",
-			"empty_fields": "Preencha todos os campos",
-			"enter-email": "errors.login.enter-email"
+			"empty_fields": "Preencha todos os campos"
 		},
 		"signup": {
 			"empty_fields": "Preencha todos os campos!",

@@ -1,57 +1,58 @@
 {
-    "common": {
-        "home": "Home",
-        "specialties": "Specialties",
-        "our-services": "Our Services",
-        "our-staff": "Our Staff",
-        "about-us": "About us",
-        "login": "Log in",
-        "signup": "Sign Up",
-        "logout": "Log out",
-        "profile": "My Profile",
-        "appointments": "My Appointments",
-        "tests": "My Tests"
-    },
-    "home": {
-        "title": "Home",
-        "welcome": "Welcome to QualiVida",
-        "starting-at": "Appointments starting at R$XXX,XX",
-        "book": "Book an Appointment"
-    },
-    "login": {
-        "title": "Login",
-        "email": "Email",
-        "password": "Password",
-        "remember-me": "Remember Me",
-        "login": "Log in"
-    },
-    "signup": {
-        "title": "Sign Up",
-        "full-name": "Full Name",
-        "email": "Email",
-        "cpf": "CPF",
-        "id": "ID",
-        "password": "Password",
-        "confirm-password": "Confirm Password",
-        "signup": "Sign Up"
-    },
-    "errors": {
-        "login": {
-            "invalid-credentials": "Invalid email and/or password",
-            "empty_email": "Fill in the email field",
-            "empty_password": "Fill in the password field",
-            "empty_fields": "Fill in all the fields"
-        },
-        "signup": {
-            "empty_fields": "Fill in all the fields!",
-            "invalid_email": "Invalid email!",
-            "invalid_password": "Password does not meet requirements!",
-            "match_password": "Passwords don't match!",
-            "invalid_cpf": "Invalid CPF!",
-            "invalid_id": "Invalid ID!",
-            "existing_cpf": "CPF already associated with a different account",
-            "existing_id": "ID already associated with a different account",
-            "existing_email": "Email already associated with a different account"
-        }
-    }
+	"common": {
+		"home": "Home",
+		"specialties": "Specialties",
+		"our-services": "Our Services",
+		"our-staff": "Our Staff",
+		"about-us": "About us",
+		"login": "Log in",
+		"signup": "Sign Up",
+		"logout": "Log out",
+		"profile": "My Profile",
+		"appointments": "My Appointments",
+		"tests": "My Tests"
+	},
+	"home": {
+		"title": "Home",
+		"welcome": "Welcome to QualiVida",
+		"starting-at": "Appointments starting at R$XXX,XX",
+		"book": "Book an Appointment"
+	},
+	"login": {
+		"title": "Login",
+		"email": "Email",
+		"password": "Password",
+		"remember-me": "Remember Me",
+		"login": "Log in"
+	},
+	"signup": {
+		"title": "Sign Up",
+		"full-name": "Full Name",
+		"email": "Email",
+		"cpf": "CPF",
+		"id": "ID",
+		"password": "Password",
+		"confirm-password": "Confirm Password",
+		"signup": "Sign Up",
+		"password_requirements": "Your password must contain at least 8 characters, one number, an uppercase letter and a lowercase letter"
+	},
+	"errors": {
+		"login": {
+			"invalid-credentials": "Invalid email and/or password",
+			"empty_email": "Fill in the email field",
+			"empty_password": "Fill in the password field",
+			"empty_fields": "Fill in all the fields"
+		},
+		"signup": {
+			"empty_fields": "Fill in all the fields!",
+			"invalid_email": "Invalid email!",
+			"invalid_password": "Password does not meet requirements!",
+			"match_password": "Passwords don't match!",
+			"invalid_cpf": "Invalid CPF!",
+			"invalid_id": "Invalid ID!",
+			"existing_cpf": "CPF already associated with a different account",
+			"existing_id": "ID already associated with a different account",
+			"existing_email": "Email already associated with a different account"
+		}
+	}
 }
