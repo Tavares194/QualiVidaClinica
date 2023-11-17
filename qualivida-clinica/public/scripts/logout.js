@@ -1,6 +1,7 @@
 document.querySelector('#logout').addEventListener('click', logout);
 
-function logout() {
+function logout(event) {
+  event.preventDefault();
   fetch('/login', {
     method: 'POST',
     credentials: 'include',

@@ -3,6 +3,7 @@ import cors from "cors";
 import session from "express-session";
 import i18n from "i18n";
 import serveFavicon from "serve-favicon";
+import cookieParser from "cookie-parser";
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -16,11 +17,13 @@ import routesHome from "./routes/routesHome.js";
 import routesCadastro from "./routes/routesCadastro.js";
 import routesEspecialidades from "./routes/routesEspecialidades.js";
 import { languageMiddleware } from "./middleware/languageMiddleware.js";
+import { checkCookieAuth } from "./middleware/authMiddleware.js";
 
 const app = express();
 const port = 8081;
 
 app.use(express.json());
+app.use(cookieParser())
 
 app.use(session({
   secret: 'secret',
@@ -55,12 +58,22 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+app.use(async (req, res, next) => {
+  try {
+    await checkCookieAuth(req, res);
+    next();
+  } catch (error) {
+    console.error('Error in authCookie:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+
 app.use(express.static('public'));
 app.use('/locales', express.static(path.join('locales')));
 app.use(express.urlencoded({ extended: true }));
 app.use(serveFavicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(languageMiddleware);
-
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'public', 'views'));
