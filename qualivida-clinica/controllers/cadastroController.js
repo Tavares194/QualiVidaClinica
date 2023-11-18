@@ -1,21 +1,42 @@
-import { db } from "../database/db.js";
 import { formValidator } from "../validators/cadastroValidator.js"
+import User from "../models/User.js";
 import bcrypt from "bcrypt";
 
-async function checkIfAlreadyRegistered(query, value, res) {
-    return new Promise((resolve, reject) => {
-        db.query(query, value, (error, results) => {
-            if (error) {
-                reject(error);
-            } else {
-                if (results.length !== 0) {
-                    resolve(true);
-                } else {
-                    resolve(false);
-                }
-            }
-        });
-    });
+async function existsInDatabase(valores) {
+    const existsCPF = await User.findAll({
+        attributes: ['cpf'],
+        where: {
+            cpf: valores.cpf
+        }
+    })
+
+    if (existsCPF.length > 0) {
+        return 'existing_cpf';
+    }
+
+    const existsRG = await User.findAll({
+        attributes: ['rg'],
+        where: {
+            rg: valores.rg
+        }
+    })
+
+    if (existsRG.length > 0) {
+        return 'existing_id';
+    }
+
+    const existsEmail = await User.findAll({
+        attributes: ['email'],
+        where: {
+            email: valores.email
+        }
+    })
+
+    if (existsEmail.length > 0) {
+        return 'existing_email';
+    }
+
+    return null;
 }
 
 export const getPage = (req, res) => {
@@ -40,40 +61,21 @@ export const cadastroUsuario = async (req, res) => {
         return;
     }
 
-    try {
-        const query_cpfVerification = "SELECT usuario_id FROM usuario WHERE cpf=?";
-        const cpfAlreadyRegistered = await checkIfAlreadyRegistered(query_cpfVerification, valores.cpf, res);
-        if (cpfAlreadyRegistered) {
-            res.render('cadastro', { mensagem_erro: req.__(errors.signup.existing_cpf), formData })
-            return;
-        }
+    const existingUser = await existsInDatabase(valores);
+    if (existingUser) {
+        const errorMessage = req.__(`errors.signup.${existingUser}`);
+        return res.render('cadastro', { mensagem_erro: errorMessage, formData });
+    }
 
-        const query_rgVerification = "SELECT usuario_id FROM usuario WHERE rg=?";
-        const rgAlreadyRegistered = await checkIfAlreadyRegistered(query_rgVerification, valores.rg, res);
-        if (rgAlreadyRegistered) {
-            res.render('cadastro', { mensagem_erro: req.__(errors.signup.existing_id), formData })
-            return;
-        }
+    valores.senha = await bcrypt.hash(valores.senha, 10);
 
-        const query_emailVerification = "SELECT usuario_id FROM usuario WHERE email=?";
-        const emailAlreadyRegistered = await checkIfAlreadyRegistered(query_emailVerification, valores.email, res);
-        if (emailAlreadyRegistered) {
-            res.render('cadastro', { mensagem_erro: req.__(errors.signup.email), formData })
-            return;
-        }
+    delete valores.confirmarSenha;
 
-        valores.senha = await bcrypt.hash(valores.senha, 10);
+    const user = await User.create(valores);
 
-        delete valores.confirmarSenha;
-
-        const query_insert = "INSERT INTO usuario SET ?;";
-        db.query(query_insert, [valores], (error) => {
-            if (error) {
-                return res.json(error);
-            }
-            return res.render('login', { successMessage: "Cadastro realizado com sucesso! Entre com suas credenciais." });
-        });
-    } catch (error) {
-        return res.json(error);
+    if (user) {
+        return res.render('login', { successMessage: req.__("login.success_message") });
+    } else {
+        res.send('Error creating user!');
     }
 }

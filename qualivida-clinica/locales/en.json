@@ -23,7 +23,8 @@
 		"email": "Email",
 		"password": "Password",
 		"remember-me": "Remember me",
-		"login": "Log in"
+		"login": "Log in",
+		"success_message": "Succesfully signed up. Please log in with your credentials."
 	},
 	"signup": {
 		"title": "Sign Up",
@@ -52,7 +53,10 @@
 			"invalid_id": "Invalid ID!",
 			"existing_cpf": "CPF already associated with a different account",
 			"existing_id": "ID already associated with a different account",
-			"existing_email": "Email already associated with a different account"
-		}
+			"existing_email": "Email already associated with a different account",
+			"existing_rg": "errors.signup.existing_rg"
+		},
+		"signup[existingUser]": "errors.signup[existingUser]",
+		"signup[existing_cpf]": "errors.signup[existing_cpf]"
 	}
 }

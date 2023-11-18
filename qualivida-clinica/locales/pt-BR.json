@@ -23,7 +23,8 @@
 		"email": "Email",
 		"password": "Senha",
 		"remember-me": "Lembrar-me",
-		"login": "Entrar"
+		"login": "Entrar",
+		"sucess_message": "Cadastro realizado com sucesso! Entre com suas credenciais."
 	},
 	"signup": {
 		"title": "Cadastro",
