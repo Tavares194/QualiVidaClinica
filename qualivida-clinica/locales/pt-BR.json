@@ -10,7 +10,15 @@
 		"logout": "Sair",
 		"profile": "Meu Perfil",
 		"appointments": "Minhas Consultas",
-		"tests": "Meus Exames"
+		"tests": "Meus Exames",
+		"footer": {
+			"navigate": "Navegue",
+			"subscribe_title": "Se increva em nossa newsletter",
+			"subscribe_subtitle": "Receba as novidades da QualiVida todo mês.",
+			"email": "Email",
+			"subscribe_button": "Increver-se",
+			"all_rights": "© 2023 QualiVida, Inc. Todos os direitos reservados."
+		}
 	},
 	"home": {
 		"title": "Início",
@@ -55,5 +63,11 @@
 			"existing_id": "RG já associado em outra conta",
 			"existing_email": "Email já associado em outra conta"
 		}
+	},
+	"specialties": {
+		"title": "Especialidades",
+		"price": "Preço: R$",
+		"our_specialties": "Nossas Especialidades",
+		"book_appointment": "Agende uma consulta com um de nossos profissionais."
 	}
 }

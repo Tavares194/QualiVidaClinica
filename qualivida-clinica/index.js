@@ -44,10 +44,15 @@ app.use(i18n.init);
 
 app.use((req, res, next) => {
   const preferredLanguage = req.acceptsLanguages([...langs]);
+
+  res.locals.preferredLanguage = preferredLanguage;
+
   res.setHeader('X-Preferred-Language', preferredLanguage);
   req.setLocale(preferredLanguage);
+
   next();
 });
+
 
 const corsOptions = {
   origin: `http://localhost:${port}`,
