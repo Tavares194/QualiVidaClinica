@@ -10,6 +10,15 @@ html {
     overflow: visible;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: white;
+}
+
 .btn-primary {
     --bs-btn-bg: var(--color2);
     --bs-btn-border-color: var(--color2);

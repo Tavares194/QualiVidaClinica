@@ -33,4 +33,3 @@ const User = db.define('User', {
 });
 
 export default User;
-

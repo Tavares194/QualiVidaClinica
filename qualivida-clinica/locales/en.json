@@ -10,7 +10,8 @@
 		"logout": "Log out",
 		"profile": "My Profile",
 		"appointments": "My Appointments",
-		"tests": "My Tests"
+		"tests": "My Tests",
+		"footer_copyright": "\u00A9 2023 QualiVida Clinic. All Rights Reserved."
 	},
 	"home": {
 		"title": "Home",
