@@ -1,58 +1,72 @@
 {
-    "common": {
-        "home": "首页",
-        "specialties": "专业领域",
-        "our-services": "我们的服务",
-        "our-staff": "我们的团队",
-        "about-us": "关于我们",
-        "login": "登录",
-        "signup": "注册",
-        "logout": "退出登录",
-        "profile": "我的资料",
-        "appointments": "我的预约",
-        "tests": "我的检查"
-    },
-    "home": {
-        "title": "首页",
-        "welcome": "欢迎来到 QualiVida",
-        "starting-at": "预约从 R$XXX,XX 起",
-        "book": "预约"
-    },
-    "login": {
-        "title": "登录",
-        "email": "电子邮箱",
-        "password": "密码",
-        "remember-me": "记住我",
-        "login": "登录"
-    },
-    "signup": {
-        "title": "注册",
-        "full-name": "全名",
-        "email": "电子邮箱",
-        "cpf": "CPF",
-        "id": "身份证",
-        "password": "密码",
-        "confirm-password": "确认密码",
-        "signup": "注册",
-        "password_requirements": "您的密码必须至少包含8个字符，一个数字，一个大写字母和一个小写字母。"
-    },
-    "errors": {
-        "login": {
-            "invalid-credentials": "无效的电子邮箱或密码",
-            "empty_email": "请输入电子邮箱",
-            "empty_password": "请输入密码",
-            "empty_fields": "请填写所有字段"
-        },
-        "signup": {
-            "empty_fields": "请填写所有字段",
-            "invalid_email": "无效的电子邮箱",
-            "invalid_password": "密码不符合要求",
-            "match_password": "两次输入的密码不一致",
-            "invalid_cpf": "无效的 CPF",
-            "invalid_id": "无效的身份证",
-            "existing_cpf": "CPF 已关联到其他账户",
-            "existing_id": "身份证已关联到其他账户",
-            "existing_email": "电子邮箱已关联到其他账户"
-        }
-    }
+	"common": {
+		"home": "首页",
+		"specialties": "专业领域",
+		"our-services": "我们的服务",
+		"our-staff": "我们的团队",
+		"about-us": "关于我们",
+		"login": "登录",
+		"signup": "注册",
+		"logout": "退出登录",
+		"profile": "我的资料",
+		"appointments": "我的预约",
+		"tests": "我的检查",
+		"footer": {
+			"navigate": "common.footer.navigate",
+			"subscribe_title": "common.footer.subscribe_title",
+			"subscribe_subtitle": "common.footer.subscribe_subtitle",
+			"email": "common.footer.email",
+			"subscribe_button": "common.footer.subscribe_button",
+			"all_rights": "common.footer.all_rights"
+		}
+	},
+	"home": {
+		"title": "首页",
+		"welcome": "欢迎来到 QualiVida",
+		"starting-at": "预约从 R$XXX,XX 起",
+		"book": "预约"
+	},
+	"login": {
+		"title": "登录",
+		"email": "电子邮箱",
+		"password": "密码",
+		"remember-me": "记住我",
+		"login": "登录"
+	},
+	"signup": {
+		"title": "注册",
+		"full-name": "全名",
+		"email": "电子邮箱",
+		"cpf": "CPF",
+		"id": "身份证",
+		"password": "密码",
+		"confirm-password": "确认密码",
+		"signup": "注册",
+		"password_requirements": "您的密码必须至少包含8个字符，一个数字，一个大写字母和一个小写字母。"
+	},
+	"errors": {
+		"login": {
+			"invalid-credentials": "无效的电子邮箱或密码",
+			"empty_email": "请输入电子邮箱",
+			"empty_password": "请输入密码",
+			"empty_fields": "请填写所有字段"
+		},
+		"signup": {
+			"empty_fields": "请填写所有字段",
+			"invalid_email": "无效的电子邮箱",
+			"invalid_password": "密码不符合要求",
+			"match_password": "两次输入的密码不一致",
+			"invalid_cpf": "无效的 CPF",
+			"invalid_id": "无效的身份证",
+			"existing_cpf": "CPF 已关联到其他账户",
+			"existing_id": "身份证已关联到其他账户",
+			"existing_email": "电子邮箱已关联到其他账户"
+		}
+	},
+	"specialties": {
+		"title": "specialties.title",
+		"our_specialties": "specialties.our_specialties",
+		"book_appointment": "specialties.book_appointment",
+		"price": "specialties.price"
+	}
 }

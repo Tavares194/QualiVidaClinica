@@ -11,7 +11,15 @@
 		"profile": "My Profile",
 		"appointments": "My Appointments",
 		"tests": "My Tests",
-		"footer_copyright": "© 2023 QualiVida Clinic. All Rights Reserved."
+		"footer_copyright": "© 2023 QualiVida Clinic. All Rights Reserved.",
+		"footer": {
+			"navigate": "common.footer.navigate",
+			"subscribe_title": "common.footer.subscribe_title",
+			"subscribe_subtitle": "common.footer.subscribe_subtitle",
+			"email": "common.footer.email",
+			"subscribe_button": "common.footer.subscribe_button",
+			"all_rights": "common.footer.all_rights"
+		}
 	},
 	"home": {
 		"title": "Home",

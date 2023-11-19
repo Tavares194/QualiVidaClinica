@@ -20,6 +20,7 @@ async function getSpecialtiesInLanguage(language) {
                 [Sequelize.fn('COALESCE', Sequelize.col('Translations.translated_name'), Sequelize.col('Specialty.default_name')), 'name'],
                 [Sequelize.fn('COALESCE', Sequelize.col('Translations.translated_price'), Sequelize.col('Specialty.default_price')), 'price'],
             ],
+            order: [[Sequelize.fn('COALESCE', Sequelize.col('Translations.translated_name'), Sequelize.col('Specialty.default_name')), 'ASC']],
         });
 
         return specialties;
