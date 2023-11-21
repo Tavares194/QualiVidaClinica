@@ -24,7 +24,12 @@
 		"title": "Início",
 		"welcome": "Bem-vindo à QualiVida",
 		"starting-at": "Consultas à partir de R$XXX,XX",
-		"book": "Agendar Consulta"
+		"book": "Agendar Consulta",
+		"icons": {
+			"title1": "home.icons.title1",
+			"title2": "home.icons.title2",
+			"title3": "home.icons.title3"
+		}
 	},
 	"login": {
 		"title": "Entrar",

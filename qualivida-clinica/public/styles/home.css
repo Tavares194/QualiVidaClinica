@@ -46,6 +46,7 @@ main * {
 
 .carousel-item>img {
     object-fit: cover;
+    filter: brightness(60%);
 }
 
 
