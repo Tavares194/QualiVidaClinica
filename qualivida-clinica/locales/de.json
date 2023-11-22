@@ -1,58 +1,115 @@
 {
-    "common": {
-        "home": "Startseite",
-        "specialties": "Fachgebiete",
-        "our-services": "Unsere Dienstleistungen",
-        "our-staff": "Unser Team",
-        "about-us": "Über Uns",
-        "login": "Anmelden",
-        "signup": "Registrieren",
-        "logout": "Abmelden",
-        "profile": "Mein Profil",
-        "appointments": "Meine Termine",
-        "tests": "Meine Untersuchungen"
-    },
-    "home": {
-        "title": "Startseite",
-        "welcome": "Willkommen bei QualiVida",
-        "starting-at": "Termine ab R$XXX,XX",
-        "book": "Termin vereinbaren"
-    },
-    "login": {
-        "title": "Anmelden",
-        "email": "E-Mail",
-        "password": "Passwort",
-        "remember-me": "Angemeldet bleiben",
-        "login": "Anmelden"
-    },
-    "signup": {
-        "title": "Registrieren",
-        "full-name": "Vollständiger Name",
-        "email": "E-Mail",
-        "cpf": "CPF",
-        "id": "Ausweisnummer",
-        "password": "Passwort",
-        "confirm-password": "Passwort bestätigen",
-        "signup": "Registrieren",
-        "password_requirements": "Ihr Passwort muss mindestens 8 Zeichen, eine Zahl, einen Großbuchstaben und einen Kleinbuchstaben enthalten."
-    },
-    "errors": {
-        "login": {
-            "invalid-credentials": "Ungültige Anmeldedaten",
-            "empty_email": "Bitte geben Sie Ihre E-Mail-Adresse ein",
-            "empty_password": "Bitte geben Sie Ihr Passwort ein",
-            "empty_fields": "Bitte füllen Sie alle Felder aus"
-        },
-        "signup": {
-            "empty_fields": "Bitte füllen Sie alle Felder aus",
-            "invalid_email": "Ungültige E-Mail-Adresse",
-            "invalid_password": "Das Passwort entspricht nicht den Anforderungen",
-            "match_password": "Die Passwörter stimmen nicht überein",
-            "invalid_cpf": "Ungültige CPF-Nummer",
-            "invalid_id": "Ungültige Ausweisnummer",
-            "existing_cpf": "CPF bereits mit einem anderen Konto verknüpft",
-            "existing_id": "Ausweisnummer bereits mit einem anderen Konto verknüpft",
-            "existing_email": "E-Mail-Adresse bereits mit einem anderen Konto verknüpft"
-        }
-    }
+	"common": {
+		"home": "Home",
+		"specialties": "Fachgebiete",
+		"our-services": "Unsere Dienstleistungen",
+		"our-staff": "Unser Team",
+		"about-us": "Über uns",
+		"login": "Anmelden",
+		"signup": "Registrieren",
+		"logout": "Abmelden",
+		"profile": "Mein Profil",
+		"appointments": "Meine Termine",
+		"tests": "Meine Tests",
+		"footer": {
+			"navigate": "Navigieren",
+			"subscribe_title": "Abonnieren Sie unseren Newsletter",
+			"subscribe_subtitle": "Erhalten Sie jeden Monat die Neuigkeiten von QualiVida.",
+			"email": "E-Mail",
+			"subscribe_button": "Abonnieren",
+			"all_rights": "© 2023 QualiVida, Inc. Alle Rechte vorbehalten."
+		}
+	},
+	"home": {
+		"title": "Home",
+		"book": "Erfahren Sie mehr",
+		"especialidade": {
+			"title": "Fachgebiete",
+			"content": "Schauen Sie sich die Fachgebiete der QualiVida-Klinik an."
+		},
+		"consulta": {
+			"title": "Termine",
+			"content": "Vereinbaren Sie Termine mit unseren Fachleuten."
+		},
+		"exame": {
+			"title": "Tests",
+			"content": "Sehen Sie sich die von der QualiVida-Klinik angebotenen Tests an."
+		},
+		"carousel-control": {
+			"next": "Weiter",
+			"previous": "Zurück"
+		},
+		"icons": {
+			"bem-estar": {
+				"title": "Wohlbefinden",
+				"content": "Mitten im Trubel der Welt sind wir der Zufluchtsort, der nicht nur verkaufen, sondern auch Leben bereichern will, wo das Wohlbefinden der Kunden unsere ständige Priorität ist."
+			},
+			"qualidade": {
+				"title": "Qualität",
+				"content": "Wir zeichnen uns als Zufluchtsort aus, der sich dazu verpflichtet, außergewöhnliche Qualität zu bieten, bei der jedes Produkt unser Engagement widerspiegelt, Erwartungen zu übertreffen und die Kundenerfahrung zu verbessern."
+			},
+			"agilidade": {
+				"title": "Agilität",
+				"content": "In einer dynamischen Umgebung zeichnen wir uns als Referenzpunkt aus, der sich verpflichtet hat, Testergebnisse agil bereitzustellen. Unser Ziel ist es, sicherzustellen, dass Effizienz im Mittelpunkt der Erfahrung unserer Kunden steht."
+			}
+		},
+		"slides": {
+			"profissionais-capacitados": {
+				"title": "Hochqualifizierte Fachleute",
+				"content": "Hochqualifizierte Gesundheitsfachleute verkörpern Exzellenz und Fürsorge. Mit scharfen Fähigkeiten und Hingabe spielen sie eine entscheidende Rolle bei der Förderung der Gesundheit."
+			},
+			"atendimento-qualidade": {
+				"title": "Qualitätsversorgung",
+				"content": "Qualitätsversorgung in der Gesundheit ist wie eine professionelle Umarmung. Engagierte Fachleute verstehen nicht nur Ihre Bedürfnisse, sondern vermitteln auch Fürsorge und Vertrauen. Jeder Termin ist mehr als nur eine Dienstleistung; es ist eine echte Verpflichtung zu Ihrem Wohlbefinden."
+			},
+			"exames-de-ponta": {
+				"title": "Tests in unseren modernen Labors",
+				"content": "Tests mit modernster Technologie repräsentieren Exzellenz in unserer Diagnostik. Unser innovativer Ansatz verbessert nicht nur die Effizienz, sondern beruhigt auch, indem er Vertrauen in die erhaltenen Daten schafft. Mit der Fusion von Wissenschaft und modernster Technologie ist jeder von unserem Unternehmen durchgeführte Test ein klarer Einblick in das Verständnis der Gesundheit und unterstreicht ein Engagement für Qualität und Wohlbefinden."
+			}
+		}
+	},
+	"login": {
+		"title": "Anmelden",
+		"email": "E-Mail",
+		"password": "Passwort",
+		"remember-me": "Erinnere dich an mich",
+		"login": "Anmelden",
+		"success_message": "Registrierung erfolgreich! Melden Sie sich mit Ihren Anmeldedaten an."
+	},
+	"signup": {
+		"title": "Registrieren",
+		"full-name": "Vollständiger Name",
+		"email": "E-Mail",
+		"cpf": "CPF",
+		"id": "ID",
+		 "password": "Passwort",
+		"confirm-password": "Passwort bestätigen",
+		"signup": "Registrieren",
+		"password_requirements": "Ihr Passwort muss mindestens 8 Zeichen, eine Zahl, einen Großbuchstaben und einen Kleinbuchstaben enthalten."
+	},
+	"errors": {
+		"login": {
+			"invalid-credentials": "Ungültige E-Mail und/oder Passwort",
+			"empty_email": "Füllen Sie das E-Mail-Feld aus",
+			"empty_password": "Füllen Sie das Passwort-Feld aus",
+			"empty_fields": "Füllen Sie alle Felder aus"
+		},
+		"signup": {
+			"empty_fields": "Füllen Sie alle Felder aus!",
+			"invalid_email": "Ungültige E-Mail!",
+			"invalid_password": "Das Passwort entspricht nicht den Anforderungen!",
+			"match_password": "Passwörter stimmen nicht überein!",
+			"invalid_cpf": "Ungültige CPF!",
+			"invalid_id": "Ungültige ID",
+			"existing_cpf": "CPF bereits mit einem anderen Konto verknüpft",
+			"existing_id": "ID bereits mit einem anderen Konto verknüpft",
+			"existing_email": "E-Mail bereits mit einem anderen Konto verknüpft"
+		}
+	},
+	"specialties": {
+		"title": "Fachgebiete",
+		"price": "Preis: €",
+		"our_specialties": "Unsere Fachgebiete",
+		"book_appointment": "Vereinbaren Sie einen Termin mit einem unserer Fachleute."
+	}
 }

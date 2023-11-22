@@ -22,13 +22,50 @@
 	},
 	"home": {
 		"title": "Início",
-		"welcome": "Bem-vindo à QualiVida",
-		"starting-at": "Consultas à partir de R$XXX,XX",
-		"book": "Agendar Consulta",
+		"book": "Saiba Mais",
+		"especialidade": {
+			"title": "Especialidades",
+			"content": "Confira as especialidades da Clínica QualiVida"
+		},
+		"consulta": {
+			"title": "Consultas",
+			"content": "Agende suas consultas com nossos profissionais"
+		},
+		"exame": {
+			"title": "Exames",
+			"content": "Veja os exames oferecidos pela Clínica QualiVida"
+		},
+		"carousel-control": {
+			"next": "Próximo",
+			"previous": "Anterior"
+		},
 		"icons": {
-			"title1": "home.icons.title1",
-			"title2": "home.icons.title2",
-			"title3": "home.icons.title3"
+			"bem-estar": {
+				"title": "Bem-estar",
+				"content": "No meio da agitação do mundo, somos o refúgio que busca não apenas vender, mas enriquecer vidas, onde o bem-estar dos clientes é nossa prioridade constante."
+			},
+			"qualidade": {
+				"title": "Qualidade",
+				"content": "Destacamo-nos como um refúgio comprometido em oferecer qualidade excepcional, onde cada produto reflete nosso compromisso em superar expectativas e elevar a experiência do cliente."
+			},
+			"agilidade": {
+				"title": "Agilidade",
+				"content": "Num ambiente dinâmico, destacamo-nos como um ponto de referência comprometido em fornecer resultados de exames com agilidade. Nosso objetivo é garantir que a eficiência esteja no centro da experiência de nossos clientes."
+			}
+		},
+		"slides": {
+			"profissionais-capacitados": {
+				"title": "Profissionais Altamente Qualificados",
+				"content": "Profissionais de saúde altamente qualificados incorporam excelência e cuidado. Com habilidades aguçadas e dedicação, desempenham um papel crucial na promoção da saúde."
+			},
+			"atendimento-qualidade": {
+				"title": "Atendimento de Qualidade",
+				"content": "O cuidado de qualidade na saúde é como um abraço profissional. Profissionais dedicados não apenas compreendem suas necessidades, mas também transmitem cuidado e confiança. Cada consulta é mais do que apenas um serviço; é um compromisso real com o seu bem-estar."
+			},
+			"exames-de-ponta": {
+				"title": "Exames em Nossos Laboratórios de Ponta",
+				"content": "Exames realizados com tecnologia de ponta representam excelência em nossos diagnósticos. A abordagem inovadora de nossa empresa não apenas aprimora a eficiência, mas também tranquiliza, proporcionando confiança nos dados obtidos. Com a fusão de ciência e tecnologia de ponta, cada exame conduzido por nossa empresa é uma janela clara para entender a saúde, destacando um compromisso com qualidade e bem-estar."
+			}
 		}
 	},
 	"login": {

@@ -4,36 +4,77 @@
 		"specialties": "Specialties",
 		"our-services": "Our Services",
 		"our-staff": "Our Staff",
-		"about-us": "About us",
-		"login": "Log in",
+		"about-us": "About Us",
+		"login": "Log In",
 		"signup": "Sign Up",
-		"logout": "Log out",
+		"logout": "Log Out",
 		"profile": "My Profile",
 		"appointments": "My Appointments",
 		"tests": "My Tests",
-		"footer_copyright": "© 2023 QualiVida Clinic. All Rights Reserved.",
 		"footer": {
-			"navigate": "common.footer.navigate",
-			"subscribe_title": "common.footer.subscribe_title",
-			"subscribe_subtitle": "common.footer.subscribe_subtitle",
-			"email": "common.footer.email",
-			"subscribe_button": "common.footer.subscribe_button",
-			"all_rights": "common.footer.all_rights"
+			"navigate": "Navigate",
+			"subscribe_title": "Subscribe to our newsletter",
+			"subscribe_subtitle": "Get QualiVida updates every month.",
+			"email": "Email",
+			"subscribe_button": "Subscribe",
+			"all_rights": "© 2023 QualiVida, Inc. All rights reserved."
 		}
 	},
 	"home": {
 		"title": "Home",
-		"welcome": "Welcome to QualiVida",
-		"starting-at": "Appointments starting at R$XXX,XX",
-		"book": "Book an Appointment"
+		"book": "Learn More",
+		"especialidade": {
+			"title": "Specialties",
+			"content": "Check out the specialties of QualiVida Clinic."
+		},
+		"consulta": {
+			"title": "Appointments",
+			"content": "Schedule your appointments with our professionals."
+		},
+		"exame": {
+			"title": "Tests",
+			"content": "See the tests offered by QualiVida Clinic."
+		},
+		"carousel-control": {
+			"next": "Next",
+			"previous": "Previous"
+		},
+		"icons": {
+			"bem-estar": {
+				"title": "Well-being",
+				"content": "In the midst of the world's hustle, we are the refuge that seeks not just to sell but to enrich lives, where the well-being of customers is our constant priority."
+			},
+			"qualidade": {
+				"title": "Quality",
+				"content": "We stand out as a refuge committed to offering exceptional quality, where each product reflects our commitment to exceed expectations and elevate the customer experience."
+			},
+			"agilidade": {
+				"title": "Agility",
+				"content": "In a dynamic environment, we stand out as a reference point committed to providing test results with agility. Our goal is to ensure that efficiency is at the center of our customers' experience."
+			}
+		},
+		"slides": {
+			"profissionais-capacitados": {
+				"title": "Highly Qualified Professionals",
+				"content": "Highly qualified healthcare professionals embody excellence and care. With sharp skills and dedication, they play a crucial role in promoting health."
+			},
+			"atendimento-qualidade": {
+				"title": "Quality Care",
+				"content": "Quality care in health is like a professional embrace. Dedicated professionals not only understand your needs but also convey care and trust. Each appointment is more than just a service; it is a real commitment to your well-being."
+			},
+			"exames-de-ponta": {
+				"title": "Tests in Our Cutting-Edge Laboratories",
+				"content": "Tests conducted with cutting-edge technology represent excellence in our diagnostics. Our company's innovative approach not only enhances efficiency but also reassures, providing confidence in the data obtained. With the fusion of science and cutting-edge technology, each test conducted by our company is a clear window to understand health, highlighting a commitment to quality and well-being."
+			}
+		}
 	},
 	"login": {
-		"title": "Login",
+		"title": "Log In",
 		"email": "Email",
 		"password": "Password",
-		"remember-me": "Remember me",
-		"login": "Log in",
-		"success_message": "Succesfully signed up. Please log in with your credentials."
+		"remember-me": "Remember Me",
+		"login": "Log In",
+		"success_message": "Registration successful! Log in with your credentials."
 	},
 	"signup": {
 		"title": "Sign Up",
@@ -44,34 +85,31 @@
 		"password": "Password",
 		"confirm-password": "Confirm Password",
 		"signup": "Sign Up",
-		"password_requirements": "Your password must contain at least 8 characters, one number, an uppercase letter and a lowercase letter."
+		"password_requirements": "Your password must contain at least 8 characters, a number, an uppercase letter, and a lowercase letter."
 	},
 	"errors": {
 		"login": {
 			"invalid-credentials": "Invalid email and/or password",
 			"empty_email": "Fill in the email field",
 			"empty_password": "Fill in the password field",
-			"empty_fields": "Fill in all the fields"
+			"empty_fields": "Fill in all fields"
 		},
 		"signup": {
-			"empty_fields": "Fill in all the fields!",
+			"empty_fields": "Fill in all fields!",
 			"invalid_email": "Invalid email!",
 			"invalid_password": "Password does not meet requirements!",
-			"match_password": "Passwords don't match!",
+			"match_password": "Passwords do not match!",
 			"invalid_cpf": "Invalid CPF!",
-			"invalid_id": "Invalid ID!",
-			"existing_cpf": "CPF already associated with a different account",
-			"existing_id": "ID already associated with a different account",
-			"existing_email": "Email already associated with a different account",
-			"existing_rg": "errors.signup.existing_rg"
-		},
-		"signup[existingUser]": "errors.signup[existingUser]",
-		"signup[existing_cpf]": "errors.signup[existing_cpf]"
+			"invalid_id": "Invalid ID",
+			"existing_cpf": "CPF already associated with another account",
+			"existing_id": "ID already associated with another account",
+			"existing_email": "Email already associated with another account"
+		}
 	},
 	"specialties": {
-		"price": "specialties.price",
-		"title": "specialties.title",
-		"our_specialties": "specialties.our_specialties",
-		"book_appointment": "specialties.book_appointment"
+		"title": "Specialties",
+		"price": "Price: $",
+		"our_specialties": "Our Specialties",
+		"book_appointment": "Schedule an appointment with one of our professionals."
 	}
 }
