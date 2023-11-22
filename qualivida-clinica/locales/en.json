@@ -22,7 +22,7 @@
 	},
 	"home": {
 		"title": "Home",
-		"book": "Learn More",
+		"learn_more": "Learn More",
 		"especialidade": {
 			"title": "Specialties",
 			"content": "Check out the specialties of QualiVida Clinic."
@@ -51,7 +51,10 @@
 			"agilidade": {
 				"title": "Agility",
 				"content": "In a dynamic environment, we stand out as a reference point committed to providing test results with agility. Our goal is to ensure that efficiency is at the center of our customers' experience."
-			}
+			},
+			"title1": "home.icons.title1",
+			"title2": "home.icons.title2",
+			"title3": "home.icons.title3"
 		},
 		"slides": {
 			"profissionais-capacitados": {

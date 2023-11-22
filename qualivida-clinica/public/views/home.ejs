@@ -6,27 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QualiVida &VerticalLine; <%= __("home.title") %>
   </title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <% if(dir==="rtl" ) { %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
-      integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
-    <% } %>
-      <link rel="stylesheet" href="../styles/general.css">
-      <link rel="stylesheet" href="../styles/home.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
-      <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Arvo:wght@400;700&family=Inconsolata:wght@400;700&display=swap"
-        rel="stylesheet" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <style>
-        html {
-          direction: <%=dir %>;
-        }
-      </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+  <% } %>
+  <link rel="stylesheet" href="../styles/general.css">
+  <link rel="stylesheet" href="../styles/home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Arvo:wght@400;700&family=Inconsolata:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    html {
+      direction: <%=dir %>;
+    }
+  </style>
 </head>
 
 <body>
@@ -56,50 +50,46 @@
         </ul>
 
         <% if (typeof username !=='undefined' ) { %>
-          <div class="dropdown text-end">
-            <a href="#"
-              class="d-flex justify-content-center align-items-center link-dark text-decoration-none dropdown-toggle"
-              id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="true">
-              <p class="text-black mb-0 me-2">
-                <%= username %>
-              </p>
-              <img src="../images/user.svg" alt="mdo" width="40" height="40" class="rounded-circle">
-            </a>
-            <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1"
-              style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 34px);"
-              data-popper-placement="bottom-start">
-              <li><a class="dropdown-item" href="#">
-                  <%= __("common.profile") %>
-                </a></li>
-              <li><a class="dropdown-item" href="#">
-                  <%= __("common.appointments") %>
-                </a></li>
-              <li><a class="dropdown-item" href="#">
-                  <%= __("common.tests") %>
-                </a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li id="logout"><a class="dropdown-item" href="#">
-                  <%= __("common.logout") %>
-                </a></li>
-            </ul>
-          </div>
+        <div class="dropdown text-end">
+          <a href="#" class="d-flex justify-content-center align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="true">
+            <p class="text-black mb-0 me-2">
+              <%= username %>
+            </p>
+            <img src="../images/user.svg" alt="mdo" width="40" height="40" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 34px);" data-popper-placement="bottom-start">
+            <li><a class="dropdown-item" href="#">
+                <%= __("common.profile") %>
+              </a></li>
+            <li><a class="dropdown-item" href="#">
+                <%= __("common.appointments") %>
+              </a></li>
+            <li><a class="dropdown-item" href="#">
+                <%= __("common.tests") %>
+              </a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li id="logout"><a class="dropdown-item" href="#">
+                <%= __("common.logout") %>
+              </a></li>
+          </ul>
+        </div>
 
-          <% } else { %>
-            <div class="text-end">
-              <a href="/login" class="text-decoration-none">
-                <button type="button" class="btn btn-outline-dark me-2">
-                  <%= __("common.login") %>
-                </button>
-              </a>
-              <a href="/cadastro" class="ext-decoration-none">
-                <button type=" button" class="btn btn-primary">
-                  <%= __("common.signup") %>
-                </button>
-              </a>
-            </div>
-            <% } %>
+        <% } else { %>
+        <div class="text-end">
+          <a href="/login" class="text-decoration-none">
+            <button type="button" class="btn btn-outline-dark me-2">
+              <%= __("common.login") %>
+            </button>
+          </a>
+          <a href="/cadastro" class="ext-decoration-none">
+            <button type=" button" class="btn btn-primary">
+              <%= __("common.signup") %>
+            </button>
+          </a>
+        </div>
+        <% } %>
       </div>
     </div>
   </header>
@@ -107,8 +97,7 @@
   <main>
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
@@ -117,9 +106,9 @@
           <img src="../images/home/carousel/especialidades_medica.jpg" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
           <div class="container">
             <div class="carousel-caption text-start">
-              <h1>Especialidades</h1>
-              <p class="opacity-75">Confira as especialidades da Clinica QualiVida</p>
-              <p><a class="btn btn-lg btn-primary" href="./especialidade">Saiba Mais</a></p>
+              <h1><%= __("home.especialidade.title") %></h1>
+              <p class="opacity-75"><%= __("home.especialidade.content") %></p>
+              <p><a class="btn btn-lg btn-primary" href="./especialidade"><%= __("home.learn_more") %></a></p>
             </div>
           </div>
         </div>
@@ -127,9 +116,9 @@
           <img src="../images/home/carousel/consulta_medica.jpg" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Consultas</h1>
-              <p>Agenda suas consultas com nossos profissionais</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
+              <h1><%= __("home.consulta.title") %></h1>
+              <p><%= __("home.consulta.content") %></p>
+              <p><a class="btn btn-lg btn-primary" href="#"><%= __("home.learn_more") %></a></p>
             </div>
           </div>
         </div>
@@ -137,9 +126,9 @@
           <img src="../images/home/carousel/exames_medica.jpg" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
           <div class="container">
             <div class="carousel-caption text-end">
-              <h1>Exames</h1>
-              <p>Veja os exames disponibilizados pela Clinica QualiVida</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
+              <h1><%= __("home.exame.title") %></h1>
+              <p><%= __("home.exame.content") %></p>
+              <p><a class="btn btn-lg btn-primary" href="#"><%= __("home.learn_more") %></a></p>
             </div>
           </div>
         </div>
@@ -159,27 +148,29 @@
         <div class="col-lg-4">
           <i class="fa-solid fa-heart-pulse fa-6x" style="color: #087f8c;"></i>
           <h2 class="fw-normal">
-            <!-- <%= __("home.icons.title1") %> --> Bem-estar
+            <%= __("home.icons.bem_estar.title") %>
           </h2>
-          <p>Em meio à correria do mundo, somos o refúgio que busca não apenas vender, mas enriquecer vidas, onde o
-            bem-estar dos clientes é nossa prioridade constante.</p>
+          <p>
+            <%= __("home.icons.bem_estar.content") %>
+          </p>
         </div>
         <div class="col-lg-4">
           <i class="fa-regular fa-handshake fa-6x" style="color: #087f8c;"></i>
           <h2 class="fw-normal">
-            <!-- <%= __("home.icons.title2") %> --> Qualidade
+            <%= __("home.icons.qualidade.title") %>
           </h2>
-          <p>Nos destacamos como um refúgio comprometido em oferecer qualidade excepcional, onde cada produto reflete
-            nosso compromisso em superar expectativas e elevar a experiência dos clientes.</p>
+          <p>
+            <%= __("home.icons.qualidade.content") %>
+          </p>
         </div>
         <div class="col-lg-4">
           <i class="fa-solid fa-bolt fa-5x" style="color: #087f8c;"></i>
           <h2 class="fw-normal">
-            <!-- <%= __("home.icons.title3") %> --> Agilidade
+            <%= __("home.icons.agilidade.title") %>
           </h2>
-          <p>Em um ambiente dinâmico, destacamo-nos como um ponto de referência comprometido em fornecer resultados de
-            exames com agilidade. Nosso objetivo é assegurar que a eficiência esteja no centro da experiência dos nossos
-            clientes.</p>
+          <p>
+            <%= __("home.icons.agilidade.content") %>
+          </p>
         </div>
       </div>
 
@@ -187,8 +178,12 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">Profissionais Altamente Capacitados</h2>
-          <p class="lead">Profissionais da saúde altamente capacitados personificam excelência e cuidado. Com habilidades afiadas e dedicação eles desempenham um papel crucial na promoção da saúde.</p>
+          <h2 class="featurette-heading fw-normal lh-1">
+            <%= __("home.slides.profissionais_capacitados.title") %>
+          </h2>
+          <p class="lead">
+            <%= __("home.slides.profissionais_capacitados.content") %>
+          </p>
         </div>
         <div class="col-md-5">
           <img src="../images/home/slide/profissionais_capacitados.jpeg" class="img-fluid mx-auto" width="500" height="500" focusable="false">
@@ -199,8 +194,12 @@
 
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading fw-normal lh-1">Atendimento de Qualidade</h2>
-          <p class="lead">Atendimento de qualidade na saúde é como um abraço profissional. Profissionais dedicados não só entendem suas necessidades, mas também transmitem cuidado e confiança. Cada consulta é mais que um serviço<br/>É um compromisso real com o seu bem-estar.</p>
+          <h2 class="featurette-heading fw-normal lh-1">
+            <%= __("home.slides.atendimento_qualidade.title") %>
+          </h2>
+          <p class="lead">
+            <%= __("home.slides.atendimento_qualidade.content") %>
+          </p>
         </div>
         <div class="col-md-5 order-md-1">
           <img src="../images/home/slide/atendimento_qualidade.jpeg" class="img-fluid mx-auto" width="500" height="500" focusable="false">
@@ -211,8 +210,13 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">Exames em Nossos Laboratórios de Ponta</h2>
-          <p class="lead">Exames realizados com tecnologia de ponta representam a excelência nos nossos diagnóstico. A abordagem inovadora da nossa empresa não apenas eleva a eficiência, mas também tranquiliza, oferecendo confiança nos dados obtidos. Com a fusão entre ciência e tecnologia de ponta, cada exame realizado pela nossa empresa é uma janela clara para a compreensão da saúde, destacando o compromisso com a qualidade e o bem-estar.</p>
+          <h2 class="featurette-heading fw-normal lh-1">
+            <%= __("home.slides.exames_de_ponta.title") %>
+
+          </h2>
+          <p class="lead">
+            <%= __("home.slides.exames_de_ponta.title") %>
+          </p>
         </div>
         <div class="col-md-5">
           <img src="../images/home/slide/exames_de_ponta.jpeg" class="img-fluid mx-auto" width="500" height="500" focusable="false">
@@ -275,16 +279,12 @@
   </main>
 
   <!--Esses Scripts são responsáveis pelo funcionamento do menu quando hamburguer// Arrumar um jeito de deixar geral como o "general.css"-->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
   <% if (typeof username !=='undefined' ) { %>
-    <script src="../scripts/logout.js"></script>
-    <% } %>
+  <script src="../scripts/logout.js"></script>
+  <% } %>
 
 </body>
 
