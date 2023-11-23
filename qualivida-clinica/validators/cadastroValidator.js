@@ -33,6 +33,7 @@ export const formValidator = function (valores) {
   let formError = null;
 
   const valoresArray = Object.values(valores);
+  console.log(valores)
   let hasEmptyField = false;
   valoresArray.forEach(valor => {
     if (!valor) {

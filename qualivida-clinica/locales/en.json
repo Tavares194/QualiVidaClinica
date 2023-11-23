@@ -5,16 +5,16 @@
 		"our-services": "Our Services",
 		"our-staff": "Our Staff",
 		"about-us": "About Us",
-		"login": "Log In",
+		"login": "Login",
 		"signup": "Sign Up",
-		"logout": "Log Out",
+		"logout": "Logout",
 		"profile": "My Profile",
 		"appointments": "My Appointments",
 		"tests": "My Tests",
 		"footer": {
 			"navigate": "Navigate",
 			"subscribe_title": "Subscribe to our newsletter",
-			"subscribe_subtitle": "Get QualiVida updates every month.",
+			"subscribe_subtitle": "Receive QualiVida updates every month.",
 			"email": "Email",
 			"subscribe_button": "Subscribe",
 			"all_rights": "© 2023 QualiVida, Inc. All rights reserved."
@@ -25,24 +25,24 @@
 		"learn_more": "Learn More",
 		"especialidade": {
 			"title": "Specialties",
-			"content": "Check out the specialties of QualiVida Clinic."
+			"content": "Check out the specialties of QualiVida Clinic"
 		},
 		"consulta": {
 			"title": "Appointments",
-			"content": "Schedule your appointments with our professionals."
+			"content": "Schedule your appointments with our professionals"
 		},
 		"exame": {
 			"title": "Tests",
-			"content": "See the tests offered by QualiVida Clinic."
+			"content": "See the tests offered by QualiVida Clinic"
 		},
 		"carousel-control": {
 			"next": "Next",
 			"previous": "Previous"
 		},
 		"icons": {
-			"bem-estar": {
+			"bem_estar": {
 				"title": "Well-being",
-				"content": "In the midst of the world's hustle, we are the refuge that seeks not just to sell but to enrich lives, where the well-being of customers is our constant priority."
+				"content": "Amidst the hustle and bustle of the world, we are the refuge that seeks not just to sell but to enrich lives, where the well-being of the customers is our constant priority."
 			},
 			"qualidade": {
 				"title": "Quality",
@@ -51,32 +51,29 @@
 			"agilidade": {
 				"title": "Agility",
 				"content": "In a dynamic environment, we stand out as a reference point committed to providing test results with agility. Our goal is to ensure that efficiency is at the center of our customers' experience."
-			},
-			"title1": "home.icons.title1",
-			"title2": "home.icons.title2",
-			"title3": "home.icons.title3"
+			}
 		},
 		"slides": {
-			"profissionais-capacitados": {
+			"profissionais_capacitados": {
 				"title": "Highly Qualified Professionals",
 				"content": "Highly qualified healthcare professionals embody excellence and care. With sharp skills and dedication, they play a crucial role in promoting health."
 			},
-			"atendimento-qualidade": {
+			"atendimento_qualidade": {
 				"title": "Quality Care",
-				"content": "Quality care in health is like a professional embrace. Dedicated professionals not only understand your needs but also convey care and trust. Each appointment is more than just a service; it is a real commitment to your well-being."
+				"content": "Quality care in health is like a professional hug. Dedicated professionals not only understand your needs but also convey care and trust. Each appointment is more than just a service; it's a real commitment to your well-being."
 			},
-			"exames-de-ponta": {
-				"title": "Tests in Our Cutting-Edge Laboratories",
-				"content": "Tests conducted with cutting-edge technology represent excellence in our diagnostics. Our company's innovative approach not only enhances efficiency but also reassures, providing confidence in the data obtained. With the fusion of science and cutting-edge technology, each test conducted by our company is a clear window to understand health, highlighting a commitment to quality and well-being."
+			"exames_de_ponta": {
+				"title": "Tests in Our State-of-the-Art Laboratories",
+				"content": "Tests conducted with state-of-the-art technology represent excellence in our diagnostics. Our company's innovative approach not only enhances efficiency but also reassures, instilling confidence in the obtained data. With the fusion of science and cutting-edge technology, each test conducted by our company is a clear window to understand health, highlighting a commitment to quality and well-being."
 			}
 		}
 	},
 	"login": {
-		"title": "Log In",
+		"title": "Login",
 		"email": "Email",
 		"password": "Password",
-		"remember-me": "Remember Me",
-		"login": "Log In",
+		"remember-me": "Remember me",
+		"login": "Login",
 		"success_message": "Registration successful! Log in with your credentials."
 	},
 	"signup": {
@@ -100,7 +97,7 @@
 		"signup": {
 			"empty_fields": "Fill in all fields!",
 			"invalid_email": "Invalid email!",
-			"invalid_password": "Password does not meet requirements!",
+			"invalid_password": "The password does not meet the requirements!",
 			"match_password": "Passwords do not match!",
 			"invalid_cpf": "Invalid CPF!",
 			"invalid_id": "Invalid ID",
@@ -111,7 +108,7 @@
 	},
 	"specialties": {
 		"title": "Specialties",
-		"price": "Price: $",
+		"price": "Price: R$",
 		"our_specialties": "Our Specialties",
 		"book_appointment": "Schedule an appointment with one of our professionals."
 	}

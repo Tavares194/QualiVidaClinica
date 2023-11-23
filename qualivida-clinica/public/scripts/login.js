@@ -11,7 +11,7 @@ fetch('/login')
 
 async function setUpLoginForm() {
 
-  const inputs = document.querySelectorAll('input');
+  const inputs = document.querySelectorAll('main input');
   const loginForm = document.querySelector('#login-form');
   const errorDiv = document.querySelector('.error-message');
   const emailInput = document.querySelector('#email');

@@ -1,7 +1,7 @@
 import User from '../models/User.js'
 
 export const checkLoggedIn = (req, res, next) => {
-  if (req.session && req.session.userId) {
+  if (req.session && req.session.user) {
     return res.redirect('/');
   }
   next();

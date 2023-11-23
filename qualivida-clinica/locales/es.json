@@ -3,42 +3,93 @@
 		"home": "Inicio",
 		"specialties": "Especialidades",
 		"our-services": "Nuestros Servicios",
-		"our-staff": "Nuestro Equipo",
+		"our-staff": "Profesionales",
 		"about-us": "Sobre Nosotros",
 		"login": "Iniciar sesión",
 		"signup": "Registro",
 		"logout": "Cerrar sesión",
 		"profile": "Mi Perfil",
 		"appointments": "Mis Citas",
-		"tests": "Mis Exámenes"
+		"tests": "Mis Exámenes",
+		"footer": {
+			"navigate": "Navegar",
+			"subscribe_title": "Suscríbete a nuestro boletín",
+			"subscribe_subtitle": "Recibe las novedades de QualiVida cada mes.",
+			"email": "Correo Electrónico",
+			"subscribe_button": "Suscribirse",
+			"all_rights": "© 2023 QualiVida, Inc. Todos los derechos reservados."
+		}
 	},
 	"home": {
 		"title": "Inicio",
-		"welcome": "Bienvenido a QualiVida",
-		"starting-at": "Consultas a partir de R$XXX,XX",
-		"book": "Agendar Cita"
+		"learn_more": "Más información",
+		"especialidade": {
+			"title": "Especialidades",
+			"content": "Consulta las especialidades de la Clínica QualiVida"
+		},
+		"consulta": {
+			"title": "Consultas",
+			"content": "Agenda tus consultas con nuestros profesionales"
+		},
+		"exame": {
+			"title": "Exámenes",
+			"content": "Ve los exámenes ofrecidos por la Clínica QualiVida"
+		},
+		"carousel-control": {
+			"next": "Siguiente",
+			"previous": "Anterior"
+		},
+		"icons": {
+			"bem_estar": {
+				"title": "Bienestar",
+				"content": "En medio del ajetreo del mundo, somos el refugio que busca no solo vender, sino enriquecer vidas, donde el bienestar de los clientes es nuestra prioridad constante."
+			},
+			"qualidade": {
+				"title": "Calidad",
+				"content": "Nos destacamos como un refugio comprometido en ofrecer calidad excepcional, donde cada producto refleja nuestro compromiso de superar expectativas y elevar la experiencia del cliente."
+			},
+			"agilidade": {
+				"title": "Agilidad",
+				"content": "En un entorno dinámico, nos destacamos como un punto de referencia comprometido en proporcionar resultados de exámenes con agilidad. Nuestro objetivo es asegurar que la eficiencia esté en el centro de la experiencia de nuestros clientes."
+			}
+		},
+		"slides": {
+			"profissionais_capacitados": {
+				"title": "Profesionales Altamente Calificados",
+				"content": "Profesionales de la salud altamente calificados incorporan excelencia y cuidado. Con habilidades agudas y dedicación, desempeñan un papel crucial en la promoción de la salud."
+			},
+			"atendimento_qualidade": {
+				"title": "Atención de Calidad",
+				"content": "La atención de calidad en la salud es como un abrazo profesional. Los profesionales dedicados no solo comprenden tus necesidades, sino que también transmiten cuidado y confianza. Cada consulta es más que solo un servicio; es un compromiso real con tu bienestar."
+			},
+			"exames_de_ponta": {
+				"title": "Exámenes en Nuestros Laboratorios de Última Generación",
+				"content": "Los exámenes realizados con tecnología de última generación representan excelencia en nuestros diagnósticos. El enfoque innovador de nuestra empresa no solo mejora la eficiencia, sino que también tranquiliza, brindando confianza en los datos obtenidos. Con la fusión de ciencia y tecnología de última generación, cada examen realizado por nuestra empresa es una ventana clara para comprender la salud, destacando un compromiso con la calidad y el bienestar."
+			}
+		}
 	},
 	"login": {
 		"title": "Iniciar sesión",
-		"email": "Correo electrónico",
+		"email": "Correo Electrónico",
 		"password": "Contraseña",
-		"remember-me": "Recuérdame",
-		"login": "Iniciar sesión"
+		"remember-me": "Recordarme",
+		"login": "Iniciar sesión",
+		"success_message": "Registro realizado con éxito. Inicia sesión con tus credenciales."
 	},
 	"signup": {
 		"title": "Registro",
 		"full-name": "Nombre Completo",
-		"email": "Correo electrónico",
+		"email": "Correo Electrónico",
 		"cpf": "CPF",
 		"id": "RG",
 		"password": "Contraseña",
 		"confirm-password": "Confirmar Contraseña",
-		"signup": "Registrar",
-		"password_requirements": "Tu contraseña debe tener al menos 8 caracteres, un número, una letra mayúscula y una letra minúscula."
+		"signup": "Registrarse",
+		"password_requirements": "Tu contraseña debe contener al menos 8 caracteres, un número, una letra mayúscula y una letra minúscula."
 	},
 	"errors": {
 		"login": {
-			"invalid-credentials": "Credenciales inválidas",
+			"invalid-credentials": "Correo electrónico y/o contraseña inválidos",
 			"empty_email": "Completa el campo de correo electrónico",
 			"empty_password": "Completa el campo de contraseña",
 			"empty_fields": "Completa todos los campos"
@@ -56,9 +107,9 @@
 		}
 	},
 	"specialties": {
-		"price": "specialties.price",
-		"title": "specialties.title",
-		"our_specialties": "specialties.our_specialties",
-		"book_appointment": "specialties.book_appointment"
+		"title": "Especialidades",
+		"price": "Precio: R$",
+		"our_specialties": "Nuestras Especialidades",
+		"book_appointment": "Agenda una consulta con uno de nuestros profesionales."
 	}
 }

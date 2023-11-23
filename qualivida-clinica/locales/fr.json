@@ -3,11 +3,11 @@
 		"home": "Accueil",
 		"specialties": "Spécialités",
 		"our-services": "Nos Services",
-		"our-staff": "Notre Équipe",
-		"about-us": "À Propos",
-		"login": "Se Connecter",
-		"signup": "S'Inscrire",
-		"logout": "Se Déconnecter",
+		"our-staff": "Professionnels",
+		"about-us": "À propos de nous",
+		"login": "Se connecter",
+		"signup": "Inscription",
+		"logout": "Déconnexion",
 		"profile": "Mon Profil",
 		"appointments": "Mes Rendez-vous",
 		"tests": "Mes Examens",
@@ -15,101 +15,101 @@
 			"navigate": "Naviguer",
 			"subscribe_title": "Abonnez-vous à notre newsletter",
 			"subscribe_subtitle": "Recevez les nouveautés de QualiVida chaque mois.",
-			"email": "Email",
-			"subscribe_button": "S'Abonner",
+			"email": "E-mail",
+			"subscribe_button": "S'abonner",
 			"all_rights": "© 2023 QualiVida, Inc. Tous droits réservés."
 		}
 	},
 	"home": {
 		"title": "Accueil",
-		"book": "En savoir plus",
+		"learn_more": "En savoir plus",
 		"especialidade": {
 			"title": "Spécialités",
-			"content": "Découvrez les spécialités de la clinique QualiVida."
+			"content": "Découvrez les spécialités de la Clinique QualiVida"
 		},
 		"consulta": {
-			"title": "Rendez-vous",
-			"content": "Planifiez vos rendez-vous avec nos professionnels."
+			"title": "Consultations",
+			"content": "Prenez rendez-vous avec nos professionnels"
 		},
 		"exame": {
 			"title": "Examens",
-			"content": "Découvrez les examens proposés par la clinique QualiVida."
+			"content": "Consultez les examens proposés par la Clinique QualiVida"
 		},
 		"carousel-control": {
 			"next": "Suivant",
 			"previous": "Précédent"
 		},
 		"icons": {
-			"bem-estar": {
+			"bem_estar": {
 				"title": "Bien-être",
 				"content": "Au milieu de l'agitation du monde, nous sommes le refuge qui cherche non seulement à vendre, mais à enrichir des vies, où le bien-être des clients est notre priorité constante."
 			},
 			"qualidade": {
 				"title": "Qualité",
-				"content": "Nous nous distinguons en tant que refuge engagé à offrir une qualité exceptionnelle, où chaque produit reflète notre engagement à dépasser les attentes et à élever l'expérience du client."
+				"content": "Nous nous distinguons comme un refuge engagé à offrir une qualité exceptionnelle, où chaque produit reflète notre engagement à dépasser les attentes et à élever l'expérience du client."
 			},
 			"agilidade": {
 				"title": "Agilité",
-				"content": "Dans un environnement dynamique, nous nous distinguons en tant que point de référence engagé à fournir des résultats d'examens avec agilité. Notre objectif est de garantir que l'efficacité soit au cœur de l'expérience de nos clients."
+				"content": "Dans un environnement dynamique, nous nous démarquons comme un point de référence engagé à fournir des résultats d'examens avec agilité. Notre objectif est de garantir que l'efficacité soit au centre de l'expérience de nos clients."
 			}
 		},
 		"slides": {
-			"profissionais-capacitados": {
+			"profissionais_capacitados": {
 				"title": "Professionnels Hautement Qualifiés",
-				"content": "Les professionnels de la santé hautement qualifiés incarnent l'excellence et les soins. Avec des compétences pointues et un dévouement, ils jouent un rôle crucial dans la promotion de la santé."
+				"content": "Les professionnels de la santé hautement qualifiés incarnent l'excellence et les soins. Avec des compétences affûtées et un dévouement, ils jouent un rôle crucial dans la promotion de la santé."
 			},
-			"atendimento-qualidade": {
+			"atendimento_qualidade": {
 				"title": "Soins de Qualité",
-				"content": "Les soins de qualité en santé sont comme une étreinte professionnelle. Les professionnels dévoués comprennent non seulement vos besoins, mais transmettent également soin et confiance. Chaque consultation est plus qu'un simple service ; c'est un véritable engagement envers votre bien-être."
+				"content": "Les soins de qualité en santé ressemblent à une étreinte professionnelle. Les professionnels dévoués comprennent non seulement vos besoins, mais transmettent également soin et confiance. Chaque consultation est plus qu'un simple service ; c'est un engagement réel envers votre bien-être."
 			},
-			"exames-de-ponta": {
+			"exames_de_ponta": {
 				"title": "Examens dans Nos Laboratoires de Pointe",
-				"content": "Les examens réalisés avec une technologie de pointe représentent l'excellence dans nos diagnostics. L'approche innovante de notre entreprise améliore non seulement l'efficacité, mais rassure également, offrant confiance dans les données obtenues. Avec la fusion de la science et de la technologie de pointe, chaque examen réalisé par notre entreprise est une fenêtre claire pour comprendre la santé, mettant en avant un engagement envers la qualité et le bien-être."
+				"content": "Les examens réalisés avec une technologie de pointe représentent l'excellence dans nos diagnostics. L'approche innovante de notre entreprise améliore non seulement l'efficacité, mais rassure également, offrant confiance dans les données obtenues. Avec la fusion de la science et de la technologie de pointe, chaque examen réalisé par notre entreprise est une fenêtre claire pour comprendre la santé, soulignant un engagement envers la qualité et le bien-être."
 			}
 		}
 	},
 	"login": {
-		"title": "Se Connecter",
-		"email": "Email",
+		"title": "Se connecter",
+		"email": "E-mail",
 		"password": "Mot de passe",
-		"remember-me": "Se Souvenir de Moi",
-		"login": "Se Connecter",
+		"remember-me": "Se souvenir de moi",
+		"login": "Se connecter",
 		"success_message": "Inscription réussie ! Connectez-vous avec vos identifiants."
 	},
 	"signup": {
-		"title": "S'Inscrire",
-		"full-name": "Nom Complet",
-		"email": "Email",
+		"title": "Inscription",
+		"full-name": "Nom complet",
+		"email": "E-mail",
 		"cpf": "CPF",
-		"id": "ID",
-		"password": "Mot de Passe",
-		"confirm-password": "Confirmer le Mot de Passe",
-		"signup": "S'Inscrire",
+		"id": "RG",
+		"password": "Mot de passe",
+		"confirm-password": "Confirmer le mot de passe",
+		"signup": "S'inscrire",
 		"password_requirements": "Votre mot de passe doit contenir au moins 8 caractères, un chiffre, une lettre majuscule et une lettre minuscule."
 	},
 	"errors": {
 		"login": {
-			"invalid-credentials": "Email et/ou mot de passe incorrects",
-			"empty_email": "Remplissez le champ email",
-			"empty_password": "Remplissez le champ mot de passe",
+			"invalid-credentials": "Identifiants invalides",
+			"empty_email": "Remplissez le champ de l'e-mail",
+			"empty_password": "Remplissez le champ du mot de passe",
 			"empty_fields": "Remplissez tous les champs"
 		},
 		"signup": {
 			"empty_fields": "Remplissez tous les champs !",
-			"invalid_email": "Email invalide !",
-			"invalid_password": "Le mot de passe ne répond pas aux exigences !",
+			"invalid_email": "E-mail invalide !",
+			"invalid_password": "Le mot de passe ne répond pas aux critères !",
 			"match_password": "Les mots de passe ne correspondent pas !",
 			"invalid_cpf": "CPF invalide !",
-			"invalid_id": "ID invalide",
+			"invalid_id": "RG invalide",
 			"existing_cpf": "CPF déjà associé à un autre compte",
-			"existing_id": "ID déjà associé à un autre compte",
-			"existing_email": "Email déjà associé à un autre compte"
+			"existing_id": "RG déjà associé à un autre compte",
+			"existing_email": "E-mail déjà associé à un autre compte"
 		}
 	},
 	"specialties": {
 		"title": "Spécialités",
-		"price": "Prix : €",
+		"price": "Prix : R$",
 		"our_specialties": "Nos Spécialités",
-		"book_appointment": "Planifiez un rendez-vous avec l'un de nos professionnels."
+		"book_appointment": "Prenez rendez-vous avec l'un de nos professionnels."
 	}
 }

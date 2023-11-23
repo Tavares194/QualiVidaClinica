@@ -14,7 +14,7 @@ const cpfInput = document.querySelector('#cpf');
 const rgInput = document.querySelector('#rg');
 
 async function setUpSignupForm() {
-  const inputs = document.querySelectorAll('input');
+  const inputs = document.querySelectorAll('.formInputs');
   const cadastroForm = document.querySelector('#cadastro-form');
   const nomeInput = document.querySelector('#nome');
   const emailInput = document.querySelector('#email');
@@ -68,12 +68,13 @@ async function setUpSignupForm() {
   cadastroForm.addEventListener('submit', event => {
     event.preventDefault();
 
-    const inputs = document.querySelectorAll('input');
+    const inputs = document.querySelectorAll('.formInputs');
     let formError;
 
     let hasEmptyField = false;
     inputs.forEach(input => {
       if (!input.value) {
+        console.log(input.value)
         hasEmptyField = true;
         input.classList.add('is-invalid');
       }
@@ -145,11 +146,6 @@ cpfInput.addEventListener('input', function () {
 
 rgInput.addEventListener('input', function () {
   var v = this.value;
-
-  if (isNaN(v[v.length - 1])) {
-    this.value = v.substring(0, v.length - 1);
-    return;
-  }
 
   this.setAttribute("maxlength", "12");
   if (v.length == 2 || v.length == 6) this.value += ".";

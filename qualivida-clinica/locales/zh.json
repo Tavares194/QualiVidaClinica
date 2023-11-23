@@ -51,6 +51,18 @@
 			"agility": {
 				"title": "敏捷",
 				"content": "在充满活力的环境中，我们以致力于迅速提供检查结果的参考点而脱颖而出。我们的目标是确保效率处于客户体验的中心。"
+			},
+			"bem_estar": {
+				"title": "home.icons.bem_estar.title",
+				"content": "home.icons.bem_estar.content"
+			},
+			"qualidade": {
+				"title": "home.icons.qualidade.title",
+				"content": "home.icons.qualidade.content"
+			},
+			"agilidade": {
+				"title": "home.icons.agilidade.title",
+				"content": "home.icons.agilidade.content"
 			}
 		},
 		"slides": {
@@ -65,7 +77,31 @@
 			"cutting-edge-tests": {
 				"title": "我们先进实验室的检查",
 				"content": "通过先进技术进行的检查代表了我们诊断的卓越水平。我们公司的创新方法不仅提高了效率，还带来了安心感，增强了对获得数据的信心。融合科学和尖端技术，我们公司进行的每项检查都是了解健康的清晰窗口，强调了我们对质量和福祉的承诺。"
+			},
+			"profissionais_capacitados": {
+				"title": "home.slides.profissionais_capacitados.title",
+				"content": "home.slides.profissionais_capacitados.content"
+			},
+			"atendimento_qualidade": {
+				"title": "home.slides.atendimento_qualidade.title",
+				"content": "home.slides.atendimento_qualidade.content"
+			},
+			"exames_de_ponta": {
+				"title": "home.slides.exames_de_ponta.title"
 			}
+		},
+		"especialidade": {
+			"title": "home.especialidade.title",
+			"content": "home.especialidade.content"
+		},
+		"learn_more": "home.learn_more",
+		"consulta": {
+			"title": "home.consulta.title",
+			"content": "home.consulta.content"
+		},
+		"exame": {
+			"title": "home.exame.title",
+			"content": "home.exame.content"
 		}
 	},
 	"login": {
@@ -90,7 +126,7 @@
 	"errors": {
 		"login": {
 			"invalid-credentials": "电子邮件和/或密码无效",
-				"empty_email": "填写电子邮件字段",
+			"empty_email": "填写电子邮件字段",
 			"empty_password": "填写密码字段",
 			"empty_fields": "填写所有字段"
 		},

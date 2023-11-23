@@ -67,7 +67,7 @@ export const loginUsuario = async (req, res) => {
                 });
             }
 
-            req.session.user = userInfo
+            req.session.user = userInfo;
             res.redirect('/');
             return;
         }
